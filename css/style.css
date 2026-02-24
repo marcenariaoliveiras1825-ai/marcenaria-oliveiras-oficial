@@ -1,129 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-:root{
---azul:#234255;
---azul-escuro:#1b3443;
---branco:#ffffff;
---cinza:#cfd8dc;
-}
+<title>Marcenaria Oliveira's | Móveis Planejados Sob Medida</title>
 
-body{
-margin:0;
-font-family:'Montserrat', sans-serif;
-background:var(--azul);
-color:var(--branco);
-}
+<meta name="description" content="Design, qualidade e personalização em móveis planejados.">
 
-/* HEADER AJUSTADO */
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-.header{
-padding:15px 30px; /* antes era 60px */
-position:fixed;
-width:100%;
-background:rgba(35,66,85,0.97);
-z-index:1000;
-}
+<body>
 
-.header .container{
-max-width:1200px;
-margin:auto;
-}
+<header class="header">
+<div class="container d-flex justify-content-between align-items-center">
 
-.logo-img{
-height:95px; /* maior */
-}
+<a href="index.html" class="marca">
+<img src="img/img/projetos/logo.png" class="logo-img">
+<div class="texto-marca">
+<span class="marcenaria">Marcenaria</span>
+<span class="oliveiras">Oliveira's</span>
+</div>
+</a>
 
-.menu{
-list-style:none;
-display:flex;
-margin:0;
-align-items:center;
-}
+<nav>
+<ul class="menu">
+<li><a href="index.html">Início</a></li>
 
-.menu li{
-margin-left:25px;
-position:relative;
-}
+<li class="dropdown">
+<a href="#">Ambientes ▼</a>
+<ul class="submenu">
+<li><a href="cozinhas.html">Cozinhas</a></li>
+<li><a href="closets.html">Closets</a></li>
+<li><a href="guarda-roupas.html">Guarda-Roupas</a></li>
+<li><a href="escritorios.html">Escritórios</a></li>
+<li><a href="moveis-infantil.html">Móveis Infantis</a></li>
+</ul>
+</li>
 
-.menu a{
-color:var(--branco);
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
 
-.menu a:hover{
-opacity:0.7;
-}
+</div>
+</header>
 
-/* DROPDOWN */
+<section class="hero">
+<div class="overlay text-center">
+<div class="container">
+<h1>Design, qualidade e personalização<br>em móveis planejados</h1>
+<p class="localizacao">📍 Paiçandu | Campo Mourão | Região</p>
+<a href="https://wa.me/5544991438651" class="btn-principal">Solicitar Orçamento</a>
+</div>
+</div>
+</section>
 
-.submenu{
-display:none;
-position:absolute;
-top:45px;
-left:0;
-background:var(--azul-escuro);
-list-style:none;
-padding:10px 0;
-min-width:200px;
-border-radius:8px;
-}
+<footer id="contato">
+<p>© 2026 Marcenaria Oliveira's</p>
+</footer>
 
-.submenu li{
-padding:8px 20px;
-}
-
-.submenu li a{
-color:white;
-}
-
-.dropdown:hover .submenu{
-display:block;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
-background:linear-gradient(rgba(35,66,85,0.85), rgba(35,66,85,0.85)),
-url('https://images.unsplash.com/photo-1588854337221-4cf9fa96059c');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-top:110px;
-}
-
-.hero h1{
-font-size:52px;
-font-weight:700;
-}
-
-.localizacao{
-margin-top:20px;
-color:var(--cinza);
-}
-
-.btn-principal{
-margin-top:30px;
-background:var(--branco);
-color:var(--azul);
-padding:15px 45px;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn-principal:hover{
-transform:translateY(-3px);
-background:var(--cinza);
-}
-
-footer{
-padding:40px;
-text-align:center;
-background:var(--azul-escuro);
-}
+</body>
+</html>
