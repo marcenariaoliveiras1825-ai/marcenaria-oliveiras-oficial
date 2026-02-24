@@ -17,7 +17,7 @@ color:var(--branco);
 /* HEADER AJUSTADO */
 
 .header{
-padding:15px 30px; /* antes era 60px */
+padding:150px 300px; /* antes era 60px */
 position:fixed;
 width:100%;
 background:rgba(35,66,85,0.97);
