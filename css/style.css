@@ -14,12 +14,12 @@ background:var(--azul);
 color:var(--branco);
 }
 
-/* HEADER REFINADO */
+/* HEADER */
 
 .header{
 position:fixed;
 width:100%;
-height:80px;
+height:130px; /* header maior para valorizar a logo */
 background:rgba(35,66,85,0.98);
 display:flex;
 align-items:center;
@@ -27,7 +27,7 @@ z-index:1000;
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.header .container{
+.container{
 max-width:1200px;
 margin:auto;
 width:100%;
@@ -37,37 +37,12 @@ align-items:center;
 padding:0 40px;
 }
 
-/* BRAND */
+/* LOGO ORIGINAL */
 
-.brand{
-display:flex;
-align-items:center;
-text-decoration:none;
-}
-
-.brand-m{
-font-size:42px;
-font-weight:700;
-color:white;
-margin-right:12px;
-}
-
-.brand-text{
-display:flex;
-flex-direction:column;
-line-height:1;
-}
-
-.brand-top{
-font-size:14px;
-color:var(--cinza);
-letter-spacing:1px;
-}
-
-.brand-bottom{
-font-size:22px;
-font-weight:600;
-color:white;
+.logo-img{
+height:110px; /* aumenta tamanho real sem alterar layout */
+width:auto;
+display:block;
 }
 
 /* MENU */
@@ -76,18 +51,19 @@ color:white;
 list-style:none;
 display:flex;
 margin:0;
+padding:0;
 align-items:center;
 }
 
 .menu li{
-margin-left:35px;
+margin-left:40px;
 position:relative;
 }
 
 .menu a{
 color:var(--branco);
 text-decoration:none;
-font-size:15px;
+font-size:16px;
 transition:0.3s;
 }
 
@@ -100,7 +76,7 @@ opacity:0.75;
 .submenu{
 display:none;
 position:absolute;
-top:30px;
+top:35px;
 left:0;
 background:var(--azul-escuro);
 list-style:none;
@@ -132,39 +108,44 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-top:80px;
+margin-top:130px;
+text-align:center;
+padding:0 20px;
 }
 
 .hero-content{
-text-align:center;
-max-width:800px;
+max-width:900px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 font-weight:700;
 }
 
 .localizacao{
 margin-top:20px;
 color:var(--cinza);
+font-size:18px;
 }
 
 .btn-principal{
 margin-top:30px;
 background:var(--branco);
 color:var(--azul);
-padding:14px 40px;
+padding:16px 45px;
 text-decoration:none;
 border-radius:6px;
 font-weight:600;
 transition:0.3s;
+display:inline-block;
 }
 
 .btn-principal:hover{
 transform:translateY(-3px);
 background:var(--cinza);
 }
+
+/* FOOTER */
 
 footer{
 padding:40px;
