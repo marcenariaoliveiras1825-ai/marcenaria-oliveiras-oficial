@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root{
 --azul:#234255;
@@ -14,51 +14,31 @@ background:var(--azul);
 color:var(--branco);
 }
 
-/* HEADER EQUILIBRADO */
+/* HEADER LIMPO E MODERNO */
 
 .header{
-padding:18px 50px;
+height:90px;
 position:fixed;
 width:100%;
-background:rgba(35,66,85,0.97);
+background:rgba(35,66,85,0.98);
+display:flex;
+align-items:center;
 z-index:1000;
+padding:0 50px;
 }
 
 .header .container{
 max-width:1200px;
 margin:auto;
-}
-
-/* MARCA */
-
-.marca{
 display:flex;
+justify-content:space-between;
 align-items:center;
-text-decoration:none;
 }
+
+/* LOGO GRANDE E PROPORCIONAL */
 
 .logo-img{
-height:85px; /* equilibrado */
-margin-right:15px;
-}
-
-.texto-marca{
-display:flex;
-flex-direction:column;
-line-height:1.1;
-}
-
-.marcenaria{
-font-size:18px;
-font-weight:400;
-color:#cfd8dc;
-}
-
-.oliveiras{
-font-size:34px; /* forte mas proporcional */
-font-weight:700;
-color:white;
-letter-spacing:1px;
+height:70px;
 }
 
 /* MENU */
@@ -71,7 +51,7 @@ align-items:center;
 }
 
 .menu li{
-margin-left:30px;
+margin-left:35px;
 position:relative;
 }
 
@@ -79,11 +59,12 @@ position:relative;
 color:var(--branco);
 text-decoration:none;
 font-weight:500;
+font-size:16px;
 transition:0.3s;
 }
 
 .menu a:hover{
-opacity:0.7;
+opacity:0.75;
 }
 
 /* DROPDOWN */
@@ -91,7 +72,7 @@ opacity:0.7;
 .submenu{
 display:none;
 position:absolute;
-top:45px;
+top:35px;
 left:0;
 background:var(--azul-escuro);
 list-style:none;
@@ -123,7 +104,7 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-top:120px; /* compensação correta */
+margin-top:90px; /* igual à altura do header */
 }
 
 .hero h1{
