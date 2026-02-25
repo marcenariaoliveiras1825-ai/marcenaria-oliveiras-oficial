@@ -1,57 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Marcenaria Oliveira's | Móveis Planejados Sob Medida</title>
-<meta name="description" content="Design, qualidade e personalização em móveis planejados.">
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcenaria Oliveira's | Móveis Planejados de Alto Padrão</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="header">
-<div class="container">
+    <header>
+        <div class="container container-nav">
+            <div class="logo">
+                <span class="logo-main">OLIVEIRA'S</span>
+                <span class="logo-sub">MARCENARIA</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Institucional</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </nav>
+            <div class="header-socials">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
 
-<a href="index.html" class="brand">
-<img src="img/logo.png" alt="Marcenaria Oliveira's" class="logo-img">
-</a>
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="top-tag">Design & Exclusividade em Maringá</span>
+            <h1>A arte de transformar espaços com <span>perfeição.</span></h1>
+            <p>Projetos sob medida que unem a robustez da madeira ao design contemporâneo.</p>
+            <div class="hero-btns">
+                <a href="#contato" class="btn-gold">SOLICITAR ORÇAMENTO</a>
+                <a href="#produtos" class="btn-outline">VER PROJETOS</a>
+            </div>
+        </div>
+    </section>
 
-<nav>
-<ul class="menu">
-<li><a href="index.html">Início</a></li>
+    <section id="produtos" class="products">
+        <div class="container">
+            <div class="section-title">
+                <span>Coleções</span>
+                <h2>Nossas Especialidades</h2>
+            </div>
+            
+            <div class="product-grid">
+                <div class="p-card">
+                    <div class="p-img" style="background-image: url('https://images.unsplash.com/photo-1556912177-f517a127d59c?q=80&w=1000')"></div>
+                    <div class="p-info">
+                        <h3>Cozinhas Gourmet</h3>
+                        <p>Funcionalidade e sofisticação para o seu dia a dia.</p>
+                        <a href="#">Saiba mais <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div class="p-img" style="background-image: url('https://images.unsplash.com/photo-1505693419173-42b9218a5c81?q=80&w=1000')"></div>
+                    <div class="p-info">
+                        <h3>Dormitórios</h3>
+                        <p>O refúgio perfeito com acabamento premium.</p>
+                        <a href="#">Saiba mais <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div class="p-img" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000')"></div>
+                    <div class="p-info">
+                        <h3>Salas de Estar</h3>
+                        <p>Painéis ripados e home theaters exclusivos.</p>
+                        <a href="#">Saiba mais <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<li class="dropdown">
-<a href="#">Ambientes ▾</a>
-<ul class="submenu">
-<li><a href="cozinhas.html">Cozinhas</a></li>
-<li><a href="closets.html">Closets</a></li>
-<li><a href="guarda-roupas.html">Guarda-Roupas</a></li>
-<li><a href="escritorios.html">Escritórios</a></li>
-<li><a href="moveis-infantil.html">Móveis Infantis</a></li>
-</ul>
-</li>
+    <a href="https://wa.me/5544991438651" class="whatsapp-btn" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+        <span>Orçamento Online</span>
+    </a>
 
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
+    <footer>
+        <p>&copy; 2026 Marcenaria Oliveira's - Todos os direitos reservados. <br> Desenvolvido com padrão Premium.</p>
+    </footer>
 
-</div>
-</header>
-
-<section class="hero">
-<div class="hero-content">
-<h1>Design, qualidade e personalização<br>em móveis planejados</h1>
-<p class="localizacao">📍 Paiçandu | Maringá | Campo Mourão | Região</p>
-<a href="https://wa.me/5544991438651" class="btn-principal">Solicitar Orçamento</a>
-</div>
-</section>
-
-<footer id="contato">
-<p>© 2026 Marcenaria Oliveira's</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
