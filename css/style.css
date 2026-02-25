@@ -14,31 +14,60 @@ background:var(--azul);
 color:var(--branco);
 }
 
-/* HEADER LIMPO E MODERNO */
+/* HEADER REFINADO */
 
 .header{
-height:90px;
 position:fixed;
 width:100%;
+height:80px;
 background:rgba(35,66,85,0.98);
 display:flex;
 align-items:center;
 z-index:1000;
-padding:0 50px;
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .header .container{
 max-width:1200px;
 margin:auto;
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:0 40px;
 }
 
-/* LOGO GRANDE E PROPORCIONAL */
+/* BRAND */
 
-.logo-img{
-height:70px;
+.brand{
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+
+.brand-m{
+font-size:42px;
+font-weight:700;
+color:white;
+margin-right:12px;
+}
+
+.brand-text{
+display:flex;
+flex-direction:column;
+line-height:1;
+}
+
+.brand-top{
+font-size:14px;
+color:var(--cinza);
+letter-spacing:1px;
+}
+
+.brand-bottom{
+font-size:22px;
+font-weight:600;
+color:white;
 }
 
 /* MENU */
@@ -58,8 +87,7 @@ position:relative;
 .menu a{
 color:var(--branco);
 text-decoration:none;
-font-weight:500;
-font-size:16px;
+font-size:15px;
 transition:0.3s;
 }
 
@@ -72,13 +100,13 @@ opacity:0.75;
 .submenu{
 display:none;
 position:absolute;
-top:35px;
+top:30px;
 left:0;
 background:var(--azul-escuro);
 list-style:none;
 padding:10px 0;
 min-width:200px;
-border-radius:8px;
+border-radius:6px;
 }
 
 .submenu li{
@@ -104,11 +132,16 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-top:90px; /* igual à altura do header */
+margin-top:80px;
+}
+
+.hero-content{
+text-align:center;
+max-width:800px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:48px;
 font-weight:700;
 }
 
@@ -121,9 +154,9 @@ color:var(--cinza);
 margin-top:30px;
 background:var(--branco);
 color:var(--azul);
-padding:15px 45px;
+padding:14px 40px;
 text-decoration:none;
-border-radius:8px;
+border-radius:6px;
 font-weight:600;
 transition:0.3s;
 }
