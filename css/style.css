@@ -14,13 +14,13 @@ background:var(--azul);
 color:var(--branco);
 }
 
-/* HEADER MAIS IMPONENTE */
+/* HEADER EQUILIBRADO */
 
 .header{
-padding:25px 60px; /* aumentamos altura */
+padding:18px 50px;
 position:fixed;
 width:100%;
-background:rgba(35,66,85,0.98);
+background:rgba(35,66,85,0.97);
 z-index:1000;
 }
 
@@ -38,28 +38,27 @@ text-decoration:none;
 }
 
 .logo-img{
-height:110px; /* maior */
-margin-right:20px;
+height:85px; /* equilibrado */
+margin-right:15px;
 }
 
 .texto-marca{
 display:flex;
 flex-direction:column;
-line-height:1;
+line-height:1.1;
 }
 
 .marcenaria{
-font-size:22px;
+font-size:18px;
 font-weight:400;
 color:#cfd8dc;
-letter-spacing:1px;
 }
 
 .oliveiras{
-font-size:46px; /* bem maior */
+font-size:34px; /* forte mas proporcional */
 font-weight:700;
 color:white;
-letter-spacing:2px;
+letter-spacing:1px;
 }
 
 /* MENU */
@@ -72,7 +71,7 @@ align-items:center;
 }
 
 .menu li{
-margin-left:35px;
+margin-left:30px;
 position:relative;
 }
 
@@ -80,7 +79,6 @@ position:relative;
 color:var(--branco);
 text-decoration:none;
 font-weight:500;
-font-size:16px;
 transition:0.3s;
 }
 
@@ -93,12 +91,12 @@ opacity:0.7;
 .submenu{
 display:none;
 position:absolute;
-top:55px;
+top:45px;
 left:0;
 background:var(--azul-escuro);
 list-style:none;
 padding:10px 0;
-min-width:220px;
+min-width:200px;
 border-radius:8px;
 }
 
@@ -114,7 +112,7 @@ color:white;
 display:block;
 }
 
-/* HERO AJUSTADO */
+/* HERO */
 
 .hero{
 height:100vh;
@@ -125,7 +123,7 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-top:150px; /* compensar header maior */
+margin-top:120px; /* compensação correta */
 }
 
 .hero h1{
