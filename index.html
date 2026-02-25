@@ -1,174 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliveira's Marcenaria | Móveis Planejados</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcenaria Oliveira's | Móveis Planejados Sob Medida</title>
 
-    <style>
-        :root {
-            /* AZUL EXTRAÍDO DA SUA MARCA */
-            --azul-oliveira: #004a8d; 
-            --azul-profundo: #003366;
-            --branco: #ffffff;
-            --cinza-claro: #f4f7f9;
-            --texto: #333333;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: var(--texto); line-height: 1.6; background-color: var(--branco); }
+<style>
 
-        /* HEADER E LOGO */
-        header {
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            background: var(--branco);
-            padding: 10px 0;
-            box-shadow: 0 2px 15px rgba(0, 74, 141, 0.15);
-        }
+:root{
+--azul:#234255;
+--azul-escuro:#1b3443;
+--branco:#ffffff;
+--cinza:#f4f4f4;
+}
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        
-        /* Mantendo a proporção exata da sua logo */
-        .logo img { 
-            height: 70px; 
-            width: auto; 
-            display: block; 
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
 
-        .nav-links { display: flex; list-style: none; gap: 25px; }
-        .nav-links a { 
-            text-decoration: none; 
-            color: var(--azul-oliveira); 
-            font-weight: 700; 
-            font-size: 13px; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-        }
+body{
+background:#fff;
+color:#333;
+}
 
-        /* HERO - O IMPACTO VISUAL */
-        .hero {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0, 74, 141, 0.7), rgba(0, 51, 102, 0.8)), 
-                        url('https://images.unsplash.com/photo-1556912177-f517a127d59c?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            color: var(--branco);
-            padding-top: 80px;
-        }
+header{
+background:var(--azul);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+}
 
-        .hero-content h1 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: clamp(2.5rem, 6vw, 4rem); 
-            margin-bottom: 15px;
-        }
+header h1{
+font-size:22px;
+font-weight:700;
+}
 
-        .btn-marca {
-            background: var(--branco);
-            color: var(--azul-oliveira);
-            padding: 18px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 4px;
-            transition: 0.4s;
-            display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .btn-marca:hover { background: var(--azul-oliveira); color: var(--branco); transform: translateY(-3px); }
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+transition:.3s;
+}
 
-        /* SEÇÃO DE PROJETOS */
-        .projetos { padding: 100px 0; background: var(--cinza-claro); text-align: center; }
-        .titulo-azul { color: var(--azul-oliveira); font-size: 2.5rem; margin-bottom: 50px; font-family: 'Playfair Display', serif; }
-        
-        .grid-projetos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+nav a:hover{
+opacity:.7;
+}
 
-        .card-oliveira {
-            background: var(--branco);
-            border-top: 6px solid var(--azul-oliveira);
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .card-oliveira:hover { border-top-color: var(--azul-profundo); transform: scale(1.02); }
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('imagem-hero.jpg') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:0 20px;
+}
 
-        /* WHATSAPP */
-        .whatsapp-fixo {
-            position: fixed; bottom: 30px; right: 30px; 
-            background: #25d366; color: white;
-            width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; text-decoration: none; z-index: 1000;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+.hero h2{
+font-size:48px;
+margin-bottom:20px;
+}
 
-        footer { background: var(--azul-profundo); color: white; padding: 40px 0; text-align: center; font-size: 13px; }
-    </style>
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:var(--azul);
+color:#fff;
+padding:15px 35px;
+text-decoration:none;
+border-radius:5px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--azul-escuro);
+}
+
+section{
+padding:80px 8%;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:60px;
+font-size:32px;
+color:var(--azul);
+font-weight:700;
+}
+
+.servicos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.card{
+background:var(--cinza);
+padding:40px;
+border-radius:8px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:var(--azul);
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.portfolio img{
+width:100%;
+border-radius:8px;
+transition:.3s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+}
+
+.cta{
+background:var(--azul);
+color:#fff;
+text-align:center;
+padding:60px 20px;
+}
+
+.cta h2{
+margin-bottom:20px;
+font-size:32px;
+}
+
+footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:30px 20px;
+font-size:14px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25d366;
+color:#fff;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+.hero h2{
+font-size:32px;
+}
+}
+
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="Marcenaria Oliveira's Oficial">
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Orçamento</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+<h1>Marcenaria Oliveira's</h1>
+<nav>
+<a href="#servicos">Serviços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Excelência em cada detalhe.</h1>
-            <p>Móveis planejados com a identidade e a força da marca Oliveira's.</p>
-            <a href="https://wa.me/5544991438651" class="btn-marca">Falar no WhatsApp</a>
-        </div>
-    </section>
+<section class="hero">
+<h2>Móveis Planejados Sob Medida</h2>
+<p>Projetos personalizados com acabamento profissional e alto padrão</p>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">Solicitar Orçamento</a>
+</section>
 
-    <section id="projetos" class="projetos">
-        <div class="container" style="display: block;">
-            <h2 class="titulo-azul">Nossas Soluções</h2>
-            <div class="grid-projetos">
-                <div class="card-oliveira">
-                    <h3>Cozinhas Gourmet</h3>
-                    <p>Design moderno aliado à funcionalidade que sua casa precisa.</p>
-                </div>
-                <div class="card-oliveira">
-                    <h3>Ambientes Comerciais</h3>
-                    <p>Móveis que transmitem a seriedade e o sucesso do seu negócio.</p>
-                </div>
-                <div class="card-oliveira">
-                    <h3>Dormitórios</h3>
-                    <p>O máximo de conforto com o acabamento impecável da nossa marcenaria.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="servicos">
+<h2 class="titulo">Nossos Serviços</h2>
 
-    <a href="https://wa.me/5544991438651" class="whatsapp-fixo" target="_blank">
-        <i class="fa fa-whatsapp"></i>
-    </a>
+<div class="servicos">
+<div class="card">
+<h3>Cozinhas Planejadas</h3>
+<p>Funcionalidade e elegância sob medida para seu espaço.</p>
+</div>
 
-    <footer>
-        <p>MARCENARIA OLIVEIRA'S - MARINGÁ/PR</p>
-        <p style="opacity: 0.7; margin-top: 5px;">Sua confiança, nosso maior projeto.</p>
-    </footer>
+<div class="card">
+<h3>Guarda-Roupas</h3>
+<p>Organização inteligente com acabamento impecável.</p>
+</div>
+
+<div class="card">
+<h3>Painéis e Salas</h3>
+<p>Design moderno e integração perfeita com seu ambiente.</p>
+</div>
+
+<div class="card">
+<h3>Projetos Comerciais</h3>
+<p>Soluções personalizadas para lojas e escritórios.</p>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="titulo">Portfólio</h2>
+
+<div class="portfolio">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+</div>
+
+</section>
+
+<section class="cta" id="contato">
+<h2>Vamos transformar seu projeto em realidade?</h2>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">Falar no WhatsApp</a>
+</section>
+
+<footer>
+© 2026 Marcenaria Oliveira's - Todos os direitos reservados
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5544999438651" target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
