@@ -40,20 +40,16 @@ position:fixed;
 top:0;
 width:100%;
 background:rgba(35,66,85,.95);
-padding:20px 8%;
+padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-color:#fff;
 z-index:1000;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-header h1 a{
-color:#fff;
-text-decoration:none;
-font-size:22px;
-font-weight:700;
+.logo img{
+height:50px;
 }
 
 nav{
@@ -95,7 +91,7 @@ opacity:.7;
 .hero{
 height:100vh;
 background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url(logo.png) center/cover no-repeat;
+url('imagem-hero.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -242,7 +238,9 @@ margin-top:10px;
 <body>
 
 <header>
-<h1><a href="#topo">logo.png</a></h1>
+<a href="#topo" class="logo">
+<img src="logo.png" alt="Marcenaria Oliveira's">
+</a>
 
 <nav>
 <a href="#portfolio">Portfólio</a>
