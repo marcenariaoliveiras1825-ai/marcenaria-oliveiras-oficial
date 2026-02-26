@@ -6,6 +6,7 @@
 <title>Marcenaria Oliveira's | Móveis Planejados Sob Medida</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -33,7 +34,7 @@ color:#333;
 padding-top:90px;
 }
 
-/* HEADER FIXO */
+/* HEADER */
 
 header{
 position:fixed;
@@ -56,10 +57,15 @@ font-size:22px;
 font-weight:700;
 }
 
+nav{
+display:flex;
+align-items:center;
+}
+
 nav a{
 color:#fff;
 text-decoration:none;
-margin-left:30px;
+margin-left:25px;
 font-weight:500;
 transition:.3s;
 }
@@ -68,11 +74,30 @@ nav a:hover{
 opacity:.7;
 }
 
+/* REDES SOCIAIS */
+
+.social{
+margin-left:30px;
+display:flex;
+gap:15px;
+}
+
+.social a{
+color:#fff;
+font-size:18px;
+transition:.3s;
+}
+
+.social a:hover{
+transform:translateY(-3px);
+opacity:.7;
+}
+
 /* HERO */
 
 .hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
 url('imagem-hero.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -81,6 +106,7 @@ align-items:center;
 text-align:center;
 color:#fff;
 padding:0 20px;
+animation:fadeIn 1.2s ease-in-out;
 }
 
 .hero h2{
@@ -99,7 +125,7 @@ background:var(--azul);
 color:#fff;
 padding:15px 35px;
 text-decoration:none;
-border-radius:5px;
+border-radius:6px;
 font-weight:600;
 transition:.3s;
 display:inline-block;
@@ -107,13 +133,21 @@ display:inline-block;
 
 .btn:hover{
 background:var(--azul-escuro);
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
 /* SEÇÕES */
 
 section{
-padding:80px 8%;
+padding:100px 8%;
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .titulo{
@@ -133,13 +167,14 @@ gap:40px;
 .card{
 background:var(--cinza);
 padding:40px;
-border-radius:8px;
+border-radius:10px;
 text-align:center;
 transition:.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,.08);
 }
 
 .card h3{
@@ -155,19 +190,21 @@ gap:20px;
 
 .portfolio img{
 width:100%;
-border-radius:8px;
-transition:.3s;
+border-radius:10px;
+transition:.4s;
 }
 
 .portfolio img:hover{
 transform:scale(1.05);
 }
 
+/* CTA */
+
 .cta{
 background:var(--azul);
 color:#fff;
 text-align:center;
-padding:60px 20px;
+padding:80px 20px;
 }
 
 .cta h2{
@@ -175,13 +212,34 @@ margin-bottom:20px;
 font-size:32px;
 }
 
+/* FOOTER */
+
 footer{
 background:#111;
 color:#aaa;
 text-align:center;
-padding:30px 20px;
-font-size:14px;
+padding:40px 20px;
 }
+
+.footer-social{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.footer-social a{
+color:#aaa;
+font-size:20px;
+transition:.3s;
+}
+
+.footer-social a:hover{
+color:#fff;
+transform:translateY(-3px);
+}
+
+/* WHATS FIXO */
 
 .whatsapp{
 position:fixed;
@@ -196,6 +254,13 @@ font-weight:600;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
+/* ANIMAÇÃO */
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
 /* RESPONSIVO */
 
 @media(max-width:768px){
@@ -206,6 +271,10 @@ header{
 flex-direction:column;
 }
 nav{
+margin-top:10px;
+flex-direction:column;
+}
+.social{
 margin-top:10px;
 }
 }
@@ -221,77 +290,87 @@ margin-top:10px;
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
+
+<div class="social">
+<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+
 </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="topo">
 <h2>Móveis Planejados Sob Medida</h2>
 <p>Projetos personalizados que unem funcionalidade, estética e acabamento profissional.</p>
-
-<a class="btn" href="https://wa.me/5544999438651" target="_blank">
-Solicitar Orçamento
-</a>
-
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">Solicitar Orçamento</a>
 </section>
 
-<!-- SERVIÇOS -->
 <section id="servicos">
 <h2 class="titulo">Nossos Serviços</h2>
-
 <div class="servicos">
-
 <div class="card">
 <h3>Cozinhas Planejadas</h3>
-<p>Funcionalidade e elegância sob medida para seu espaço.</p>
+<p>Funcionalidade e elegância sob medida.</p>
 </div>
-
 <div class="card">
 <h3>Guarda-Roupas</h3>
-<p>Organização inteligente com acabamento impecável.</p>
+<p>Organização inteligente e acabamento impecável.</p>
 </div>
-
 <div class="card">
 <h3>Painéis e Salas</h3>
-<p>Design moderno e integração perfeita com seu ambiente.</p>
+<p>Design moderno e integração perfeita.</p>
 </div>
-
 <div class="card">
 <h3>Projetos Comerciais</h3>
 <p>Soluções personalizadas para lojas e escritórios.</p>
 </div>
-
 </div>
 </section>
 
-<!-- PORTFÓLIO -->
 <section id="portfolio">
 <h2 class="titulo">Portfólio</h2>
-
 <div class="portfolio">
 <img src="foto1.jpg">
 <img src="foto2.jpg">
 <img src="foto3.jpg">
 <img src="foto4.jpg">
 </div>
-
 </section>
 
-<!-- CTA -->
 <section class="cta" id="contato">
 <h2>Vamos transformar seu projeto em realidade?</h2>
-<a class="btn" href="https://wa.me/5544999438651" target="_blank">
-Falar no WhatsApp
-</a>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">Falar no WhatsApp</a>
 </section>
 
 <footer>
-© 2026 Marcenaria Oliveira's - Todos os direitos reservados
+<p>© 2026 Marcenaria Oliveira's - Todos os direitos reservados</p>
+
+<div class="footer-social">
+<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5544999438651" target="_blank">
 WhatsApp
 </a>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(sec => {
+const top = window.scrollY;
+const offset = sec.offsetTop - 400;
+const height = sec.offsetHeight;
+
+if(top >= offset && top < offset + height){
+sec.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
