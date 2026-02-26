@@ -23,10 +23,13 @@ box-sizing:border-box;
 font-family:'Montserrat',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#fff;
 color:#333;
-scroll-behavior:smooth;
 padding-top:90px;
 }
 
@@ -46,7 +49,9 @@ z-index:1000;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-header h1{
+header h1 a{
+color:#fff;
+text-decoration:none;
 font-size:22px;
 font-weight:700;
 }
@@ -191,6 +196,8 @@ font-weight:600;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
+/* RESPONSIVO */
+
 @media(max-width:768px){
 .hero h2{
 font-size:32px;
@@ -205,10 +212,11 @@ margin-top:10px;
 
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Marcenaria Oliveira's</h1>
+<h1><a href="#topo">Marcenaria Oliveira's</a></h1>
 <nav>
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
@@ -216,7 +224,8 @@ margin-top:10px;
 </nav>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="topo">
 <h2>Móveis Planejados Sob Medida</h2>
 <p>Projetos personalizados que unem funcionalidade, estética e acabamento profissional.</p>
 
@@ -224,10 +233,9 @@ margin-top:10px;
 Solicitar Orçamento
 </a>
 
+</section>
 
-
-
-
+<!-- SERVIÇOS -->
 <section id="servicos">
 <h2 class="titulo">Nossos Serviços</h2>
 
@@ -256,6 +264,7 @@ Solicitar Orçamento
 </div>
 </section>
 
+<!-- PORTFÓLIO -->
 <section id="portfolio">
 <h2 class="titulo">Portfólio</h2>
 
@@ -268,6 +277,7 @@ Solicitar Orçamento
 
 </section>
 
+<!-- CTA -->
 <section class="cta" id="contato">
 <h2>Vamos transformar seu projeto em realidade?</h2>
 <a class="btn" href="https://wa.me/5544999438651" target="_blank">
