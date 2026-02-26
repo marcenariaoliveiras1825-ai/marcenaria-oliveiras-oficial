@@ -27,6 +27,7 @@ body{
 background:#fff;
 color:#333;
 scroll-behavior:smooth;
+padding-top:90px;
 }
 
 /* HEADER FIXO */
@@ -46,7 +47,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 header h1{
-font-size:20px;
+font-size:22px;
 font-weight:700;
 }
 
@@ -65,8 +66,8 @@ opacity:.7;
 /* HERO */
 
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
 url('imagem-hero.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -78,9 +79,8 @@ padding:0 20px;
 }
 
 .hero h2{
-font-size:52px;
+font-size:48px;
 margin-bottom:20px;
-font-weight:700;
 }
 
 .hero p{
@@ -94,7 +94,7 @@ background:var(--azul);
 color:#fff;
 padding:15px 35px;
 text-decoration:none;
-border-radius:6px;
+border-radius:5px;
 font-weight:600;
 transition:.3s;
 display:inline-block;
@@ -105,40 +105,19 @@ background:var(--azul-escuro);
 transform:translateY(-3px);
 }
 
-/* ESPAÇAMENTO COMPENSANDO HEADER FIXO */
+/* SEÇÕES */
 
 section{
-padding:100px 8%;
+padding:80px 8%;
 }
 
 .titulo{
 text-align:center;
 margin-bottom:60px;
-font-size:34px;
+font-size:32px;
 color:var(--azul);
 font-weight:700;
 }
-
-/* AUTORIDADE */
-
-.autoridade{
-background:var(--cinza);
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-text-align:center;
-}
-
-.autoridade div{
-padding:30px;
-}
-
-.autoridade h3{
-margin-bottom:15px;
-color:var(--azul);
-}
-
-/* SERVIÇOS */
 
 .servicos{
 display:grid;
@@ -147,11 +126,10 @@ gap:40px;
 }
 
 .card{
-background:#fff;
+background:var(--cinza);
 padding:40px;
-border-radius:10px;
+border-radius:8px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
 transition:.3s;
 }
 
@@ -164,8 +142,6 @@ margin-bottom:15px;
 color:var(--azul);
 }
 
-/* PORTFOLIO */
-
 .portfolio{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -174,7 +150,7 @@ gap:20px;
 
 .portfolio img{
 width:100%;
-border-radius:10px;
+border-radius:8px;
 transition:.3s;
 }
 
@@ -182,21 +158,17 @@ transition:.3s;
 transform:scale(1.05);
 }
 
-/* CTA */
-
 .cta{
 background:var(--azul);
 color:#fff;
 text-align:center;
-padding:80px 20px;
+padding:60px 20px;
 }
 
 .cta h2{
 margin-bottom:20px;
-font-size:34px;
+font-size:32px;
 }
-
-/* FOOTER */
 
 footer{
 background:#111;
@@ -205,8 +177,6 @@ text-align:center;
 padding:30px 20px;
 font-size:14px;
 }
-
-/* BOTÃO WHATS FIXO */
 
 .whatsapp{
 position:fixed;
@@ -220,8 +190,6 @@ text-decoration:none;
 font-weight:600;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
-
-/* RESPONSIVO */
 
 @media(max-width:768px){
 .hero h2{
@@ -250,49 +218,72 @@ margin-top:10px;
 
 <section class="hero">
 <h2>Móveis Planejados Sob Medida</h2>
-<p>Cozinhas, guarda-roupas e ambientes planejados com acabamento profissional e instalação especializada.</p>
-<a class="btn" href="https://wa.me/5544999438651" target="_blank">Solicitar Orçamento</a>
-</section>
+<p>Projetos personalizados que unem funcionalidade, estética e acabamento profissional.</p>
 
-<!-- AUTORIDADE -->
-<section class="autoridade">
-<div>
-<h3>Projeto Personalizado</h3>
-<p>Desenvolvemos cada ambiente conforme seu espaço e necessidade.</p>
-</div>
-<div>
-<h3>Fabricação Própria</h3>
-<p>Controle total de qualidade em cada detalhe.</p>
-</div>
-<div>
-<h3>Instalação Profissional</h3>
-<p>Equipe especializada garantindo acabamento impecável.</p>
-</div>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">
+Solicitar Orçamento
+</a>
+
+<a class="btn" href="#portfolio" style="background:#fff;color:#234255;margin-left:15px;">
+Ver Portfólio
+</a>
+
 </section>
 
 <section id="servicos">
 <h2 class="titulo">Nossos Serviços</h2>
 
 <div class="servicos">
+
 <div class="card">
 <h3>Cozinhas Planejadas</h3>
-<p>Funcionalidade e elegância sob medida.</p>
+<p>Funcionalidade e elegância sob medida para seu espaço.</p>
 </div>
+
 <div class="card">
 <h3>Guarda-Roupas</h3>
-<p>Organização inteligente e acabamento superior.</p>
+<p>Organização inteligente com acabamento impecável.</p>
 </div>
+
 <div class="card">
 <h3>Painéis e Salas</h3>
-<p>Design moderno e integração perfeita.</p>
+<p>Design moderno e integração perfeita com seu ambiente.</p>
 </div>
+
 <div class="card">
 <h3>Projetos Comerciais</h3>
 <p>Soluções personalizadas para lojas e escritórios.</p>
 </div>
+
 </div>
 </section>
 
 <section id="portfolio">
-<h2 class="titulo">Projetos Recentes</h2>
+<h2 class="titulo">Portfólio</h2>
+
 <div class="portfolio">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+</div>
+
+</section>
+
+<section class="cta" id="contato">
+<h2>Vamos transformar seu projeto em realidade?</h2>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">
+Falar no WhatsApp
+</a>
+</section>
+
+<footer>
+© 2026 Marcenaria Oliveira's - Todos os direitos reservados
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5544999438651" target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
