@@ -11,8 +11,9 @@
 <style>
 
 :root{
---azul-principal:#1f4e6b;
---azul-escuro:#16394f;
+--azul-topo:#0f2f3f;       /* azul petróleo forte */
+--azul-meio:#163f56;       /* transição */
+--azul-base:#1f4e6b;       /* azul principal */
 }
 
 *{
@@ -27,18 +28,23 @@ scroll-behavior:smooth;
 }
 
 body{
-background:var(--azul-principal);
 color:#fff;
 padding-top:90px;
+background:linear-gradient(
+180deg,
+var(--azul-topo) 0%,
+var(--azul-meio) 35%,
+var(--azul-base) 100%
+);
 }
 
-/* HEADER MAIS ESCURO */
+/* HEADER PETRÓLEO */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:var(--azul-escuro);
+background:var(--azul-topo);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -49,7 +55,7 @@ z-index:1000;
 /* LOGO */
 
 .logo img{
-height:55px;
+height:60px;
 }
 
 /* NAV */
@@ -71,8 +77,6 @@ nav a:hover{
 opacity:.7;
 }
 
-/* SOCIAL */
-
 .social{
 margin-left:30px;
 display:flex;
@@ -82,18 +86,12 @@ gap:15px;
 .social a{
 color:#fff;
 font-size:18px;
-transition:.3s;
-}
-
-.social a:hover{
-opacity:.7;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-background:var(--azul-principal);
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -117,7 +115,7 @@ max-width:700px;
 
 .btn{
 background:#fff;
-color:var(--azul-principal);
+color:var(--azul-base);
 padding:15px 35px;
 text-decoration:none;
 border-radius:6px;
@@ -133,7 +131,6 @@ background:#e5e5e5;
 
 section{
 padding:100px 8%;
-background:var(--azul-principal);
 }
 
 .titulo{
@@ -160,7 +157,6 @@ border-radius:10px;
 /* CTA */
 
 .cta{
-background:var(--azul-principal);
 text-align:center;
 padding:80px 20px;
 }
@@ -168,7 +164,7 @@ padding:80px 20px;
 /* FOOTER */
 
 footer{
-background:var(--azul-escuro);
+background:var(--azul-topo);
 text-align:center;
 padding:40px 20px;
 }
@@ -209,7 +205,6 @@ margin-top:10px;
 <body>
 
 <header>
-
 <a href="#topo" class="logo">
 <img src="img/logo.png" alt="Marcenaria Oliveira's">
 </a>
@@ -227,7 +222,6 @@ margin-top:10px;
 <i class="fab fa-facebook-f"></i>
 </a>
 </div>
-
 </nav>
 </header>
 
@@ -238,7 +232,6 @@ margin-top:10px;
 <a class="btn" href="https://wa.me/5544999438651" target="_blank">
 Solicitar Orçamento
 </a>
-
 </section>
 
 <section id="portfolio">
@@ -250,7 +243,6 @@ Solicitar Orçamento
 <img src="foto3.jpg">
 <img src="foto4.jpg">
 </div>
-
 </section>
 
 <section class="cta" id="contato">
@@ -259,7 +251,6 @@ Solicitar Orçamento
 <a class="btn" href="https://wa.me/5544999438651" target="_blank">
 Falar no WhatsApp
 </a>
-
 </section>
 
 <footer>
