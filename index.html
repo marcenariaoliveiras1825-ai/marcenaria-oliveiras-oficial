@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
@@ -28,10 +27,9 @@ html{
 scroll-behavior:smooth;
 }
 
-/* FUNDO AGORA AZUL */
 body{
-background:#234255; /* azul da marca */
-color:#fff; /* texto branco para contraste */
+background:#fff;
+color:#333;
 padding-top:90px;
 }
 
@@ -41,17 +39,21 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:#234255;
+background:rgba(35,66,85,.95);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+color:#fff;
 z-index:1000;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-.logo img{
-height:75px;
+header h1 a{
+color:#fff;
+text-decoration:none;
+font-size:22px;
+font-weight:700;
 }
 
 nav{
@@ -88,12 +90,12 @@ transform:translateY(-3px);
 opacity:.7;
 }
 
-/* HERO */
+/* HERO (AGORA COM OVERLAY AZUL) */
 
 .hero{
 height:100vh;
 background:linear-gradient(rgba(27,52,67,.75),rgba(27,52,67,.75)),
-url(img/hero.jpg) center/cover no-repeat;
+url(logo.png) center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -115,8 +117,8 @@ max-width:700px;
 }
 
 .btn{
-background:#fff;
-color:#234255;
+background:var(--azul);
+color:#fff;
 padding:15px 35px;
 text-decoration:none;
 border-radius:6px;
@@ -126,7 +128,7 @@ display:inline-block;
 }
 
 .btn:hover{
-background:#e5e5e5;
+background:var(--azul-escuro);
 transform:translateY(-4px);
 }
 
@@ -136,12 +138,11 @@ section{
 padding:100px 8%;
 }
 
-/* Mantendo títulos visíveis */
 .titulo{
 text-align:center;
 margin-bottom:60px;
 font-size:32px;
-color:#fff;
+color:var(--azul);
 font-weight:700;
 }
 
@@ -166,7 +167,7 @@ transform:scale(1.05);
 /* CTA */
 
 .cta{
-background:#1b3443;
+background:var(--azul);
 color:#fff;
 text-align:center;
 padding:80px 20px;
@@ -177,10 +178,10 @@ margin-bottom:20px;
 font-size:32px;
 }
 
-/* FOOTER */
+/* FOOTER (AGORA AZUL) */
 
 footer{
-background:#1b3443;
+background:#234255;
 color:#ccc;
 text-align:center;
 padding:40px 20px;
@@ -233,9 +234,6 @@ flex-direction:column;
 .social{
 margin-top:10px;
 }
-.logo img{
-height:60px;
-}
 }
 
 </style>
@@ -244,17 +242,14 @@ height:60px;
 <body>
 
 <header>
-
-<a href="#topo" class="logo">
-<img src="img/logo.png" alt="Marcenaria Oliveira's">
-</a>
+<h1><a href="#topo">logo.png</a></h1>
 
 <nav>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
 
 <div class="social">
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
+<a href="https://www.instagram.com/marcenaria_oliveiras?igsh=aXQzMXF6dzVsYjBy" target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
 
@@ -270,7 +265,7 @@ height:60px;
 <h2>Móveis Planejados Sob Medida</h2>
 <p>Projetos personalizados que unem funcionalidade, estética e acabamento profissional.</p>
 
-<a class="btn" href="https://wa.me/5544999438651?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento." target="_blank">
+<a class="btn" href="https://wa.me/5544999438651?text=Olá,%20vim%20pelo%20site%20da%20Marcenaria%20Oliveira's%20e%20gostaria%20de%20um%20orçamento." target="_blank">
 Solicitar Orçamento
 </a>
 
@@ -280,10 +275,10 @@ Solicitar Orçamento
 <h2 class="titulo">Portfólio</h2>
 
 <div class="portfolio">
-<img src="img/projetos/foto1.jpg">
-<img src="img/projetos/foto2.jpg">
-<img src="img/projetos/foto3.jpg">
-<img src="img/projetos/foto4.jpg">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
 </div>
 
 </section>
@@ -291,7 +286,7 @@ Solicitar Orçamento
 <section class="cta" id="contato">
 <h2>Vamos transformar seu projeto em realidade?</h2>
 
-<a class="btn" href="https://wa.me/5544999438651?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento." target="_blank">
+<a class="btn" href="https://wa.me/5544999438651?text=Olá,%20vim%20pelo%20Instagram/Site%20e%20quero%20um%20orçamento." target="_blank">
 Falar no WhatsApp
 </a>
 
@@ -301,7 +296,7 @@ Falar no WhatsApp
 <p>© 2026 Marcenaria Oliveira's - Todos os direitos reservados</p>
 
 <div class="footer-social">
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
+<a href="https://www.instagram.com/marcenaria_oliveiras?igsh=aXQzMXF6dzVsYjBy" target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
 
