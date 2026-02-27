@@ -11,9 +11,7 @@
 <style>
 
 :root{
---azul:#234255;
---azul-escuro:#1b3443;
---cinza:#f4f4f4;
+--azul:#1f4e6b; /* AZUL MAIS VIVO */
 }
 
 *{
@@ -25,12 +23,12 @@ font-family:'Montserrat',sans-serif;
 
 html{
 scroll-behavior:smooth;
-background:#234255; /* FORÇA FUNDO AZUL */
+background:var(--azul);
 }
 
 body{
-background:#234255; /* FUNDO AZUL */
-color:#fff; /* TEXTO BRANCO */
+background:var(--azul);
+color:#fff;
 padding-top:90px;
 }
 
@@ -40,22 +38,21 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:#234255; /* AZUL */
+background:var(--azul);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-color:#fff;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-header h1 a{
-color:#fff;
-text-decoration:none;
-font-size:22px;
-font-weight:700;
+/* LOGO */
+
+.logo img{
+height:55px;
 }
+
+/* NAV */
 
 nav{
 display:flex;
@@ -67,11 +64,6 @@ color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-opacity:.7;
 }
 
 .social{
@@ -83,25 +75,18 @@ gap:15px;
 .social a{
 color:#fff;
 font-size:18px;
-transition:.3s;
-}
-
-.social a:hover{
-transform:translateY(-3px);
-opacity:.7;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-background:#234255; /* REMOVE PRETO */
+background:var(--azul);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:#fff;
 padding:0 20px;
 }
 
@@ -118,33 +103,26 @@ max-width:700px;
 
 .btn{
 background:#fff;
-color:#234255;
+color:var(--azul);
 padding:15px 35px;
 text-decoration:none;
 border-radius:6px;
 font-weight:600;
-transition:.3s;
-display:inline-block;
-}
-
-.btn:hover{
-background:#e5e5e5;
-transform:translateY(-4px);
 }
 
 /* SEÇÕES */
 
 section{
 padding:100px 8%;
-background:#234255; /* AZUL */
+background:var(--azul);
 }
 
 .titulo{
 text-align:center;
 margin-bottom:60px;
 font-size:32px;
-color:#fff;
 font-weight:700;
+color:#fff;
 }
 
 /* PORTFOLIO */
@@ -158,52 +136,23 @@ gap:20px;
 .portfolio img{
 width:100%;
 border-radius:10px;
-transition:.4s;
-}
-
-.portfolio img:hover{
-transform:scale(1.05);
 }
 
 /* CTA */
 
 .cta{
-background:#234255;
-color:#fff;
+background:var(--azul);
 text-align:center;
 padding:80px 20px;
-}
-
-.cta h2{
-margin-bottom:20px;
-font-size:32px;
 }
 
 /* FOOTER */
 
 footer{
-background:#234255; /* REMOVE PRETO */
-color:#fff;
+background:var(--azul);
 text-align:center;
 padding:40px 20px;
-}
-
-.footer-social{
-margin-top:20px;
-display:flex;
-justify-content:center;
-gap:20px;
-}
-
-.footer-social a{
 color:#fff;
-font-size:20px;
-transition:.3s;
-}
-
-.footer-social a:hover{
-opacity:.7;
-transform:translateY(-3px);
 }
 
 /* WHATS FIXO */
@@ -218,7 +167,6 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 @media(max-width:768px){
@@ -243,7 +191,10 @@ margin-top:10px;
 <body>
 
 <header>
-<h1><a href="#topo">logo.png</a></h1>
+
+<a href="#topo" class="logo">
+<img src="img/logo.png" alt="Marcenaria Oliveira's">
+</a>
 
 <nav>
 <a href="#portfolio">Portfólio</a>
@@ -295,17 +246,6 @@ Falar no WhatsApp
 
 <footer>
 <p>© 2026 Marcenaria Oliveira's - Todos os direitos reservados</p>
-
-<div class="footer-social">
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-</div>
-
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5544999438651" target="_blank">
