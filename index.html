@@ -13,7 +13,8 @@
 :root{
 --azul:#234255;
 --azul-escuro:#1b3443;
---cinza:#f4f4f4;
+--azul-overlay:rgba(27,52,67,.75);
+--fundo-claro:#f4f6f8;
 }
 
 *{
@@ -30,7 +31,7 @@ scroll-behavior:smooth;
 body{
 background:#fff;
 color:#333;
-padding-top:110px;
+padding-top:100px;
 }
 
 /* HEADER */
@@ -39,17 +40,21 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(35,66,85,.95);
+background:var(--azul);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+color:#fff;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
-.logo img{
-height:75px;
+header h1 a{
+color:#fff;
+text-decoration:none;
+font-size:22px;
+font-weight:700;
 }
 
 nav{
@@ -66,7 +71,7 @@ transition:.3s;
 }
 
 nav a:hover{
-opacity:.7;
+opacity:.8;
 }
 
 .social{
@@ -78,6 +83,12 @@ gap:15px;
 .social a{
 color:#fff;
 font-size:18px;
+transition:.3s;
+}
+
+.social a:hover{
+transform:translateY(-3px);
+opacity:.8;
 }
 
 /* HERO */
@@ -85,7 +96,7 @@ font-size:18px;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+linear-gradient(var(--azul-overlay), var(--azul-overlay)),
 url('img/hero.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -97,7 +108,7 @@ padding:0 20px;
 }
 
 .hero h2{
-font-size:56px;
+font-size:54px;
 font-weight:800;
 margin-bottom:20px;
 }
@@ -108,9 +119,11 @@ margin-bottom:40px;
 max-width:750px;
 }
 
+/* BOTÕES */
+
 .btn{
 background:#ffffff;
-color:#234255;
+color:var(--azul);
 padding:18px 45px;
 text-decoration:none;
 border-radius:8px;
@@ -120,7 +133,7 @@ display:inline-block;
 }
 
 .btn:hover{
-background:#e5e5e5;
+background:#e9eef2;
 transform:translateY(-4px);
 }
 
@@ -138,7 +151,11 @@ color:var(--azul);
 font-weight:700;
 }
 
-/* PORTFOLIO */
+/* PORTFÓLIO */
+
+#portfolio{
+background:var(--fundo-claro);
+}
 
 .portfolio{
 display:grid;
@@ -156,39 +173,10 @@ transition:.4s;
 transform:scale(1.05);
 }
 
-/* INSTAGRAM */
-
-.instagram{
-background:var(--cinza);
-text-align:center;
-}
-
-.instagram p{
-max-width:600px;
-margin:0 auto 30px auto;
-font-size:18px;
-}
-
-.insta-btn{
-background:#234255;
-color:#fff;
-padding:15px 35px;
-border-radius:8px;
-font-weight:600;
-text-decoration:none;
-display:inline-block;
-transition:.3s;
-}
-
-.insta-btn:hover{
-background:#1b3443;
-transform:translateY(-4px);
-}
-
 /* CTA */
 
 .cta{
-background:var(--azul);
+background:var(--azul-escuro);
 color:#fff;
 text-align:center;
 padding:80px 20px;
@@ -202,8 +190,8 @@ font-size:32px;
 /* FOOTER */
 
 footer{
-background:#111;
-color:#aaa;
+background:#0f1f29;
+color:#ccc;
 text-align:center;
 padding:40px 20px;
 }
@@ -216,8 +204,14 @@ gap:20px;
 }
 
 .footer-social a{
-color:#aaa;
+color:#ccc;
 font-size:20px;
+transition:.3s;
+}
+
+.footer-social a:hover{
+color:#fff;
+transform:translateY(-3px);
 }
 
 /* WHATS FIXO */
@@ -240,19 +234,24 @@ box-shadow:0 5px 15px rgba(0,0,0,.3);
 @media(max-width:768px){
 
 .hero h2{
-font-size:34px;
+font-size:32px;
 }
 
 .hero p{
 font-size:18px;
 }
 
-.logo img{
-height:60px;
+header{
+flex-direction:column;
 }
 
-body{
-padding-top:130px;
+nav{
+margin-top:10px;
+flex-direction:column;
+}
+
+.social{
+margin-top:10px;
 }
 
 }
@@ -263,17 +262,14 @@ padding-top:130px;
 <body>
 
 <header>
-
-<a href="#topo" class="logo">
-<img src="img/logo.png" alt="Marcenaria Oliveira's">
-</a>
+<h1><a href="#topo">Marcenaria Oliveira's</a></h1>
 
 <nav>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
 
 <div class="social">
-<a href="https://www.instagram.com/marcenaria_oliveiras?igsh=aXQzMXF6dzVsYjBy" target="_blank">
+<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
 <a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
@@ -282,7 +278,6 @@ padding-top:130px;
 </div>
 
 </nav>
-
 </header>
 
 <section class="hero" id="topo">
@@ -295,7 +290,7 @@ Solicitar Orçamento
 </section>
 
 <section id="portfolio">
-<h2 class="titulo">Projetos Recentes</h2>
+<h2 class="titulo">Portfólio</h2>
 
 <div class="portfolio">
 <img src="img/projetos/foto1.jpg">
@@ -305,19 +300,9 @@ Solicitar Orçamento
 </div>
 </section>
 
-<section class="instagram">
-<h2 class="titulo">Acompanhe Nossos Trabalhos no Instagram</h2>
-<p>Veja projetos completos, bastidores da produção e instalações reais direto no nosso perfil.</p>
-
-<a class="insta-btn"
-href="https://www.instagram.com/marcenaria_oliveiras"
-target="_blank">
-Ver no Instagram
-</a>
-</section>
-
 <section class="cta" id="contato">
 <h2>Vamos transformar seu projeto em realidade?</h2>
+
 <a class="btn" href="https://wa.me/5544999438651?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento." target="_blank">
 Falar no WhatsApp
 </a>
