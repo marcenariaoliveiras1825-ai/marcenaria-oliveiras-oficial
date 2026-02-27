@@ -49,11 +49,17 @@ z-index:1000;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
+header h1{
+margin:0;
+}
+
+header h1 img{
+height:65px;
+}
+
 header h1 a{
-color:#fff;
-text-decoration:none;
-font-size:22px;
-font-weight:700;
+display:flex;
+align-items:center;
 }
 
 nav{
@@ -90,12 +96,12 @@ transform:translateY(-3px);
 opacity:.7;
 }
 
-/* HERO — AGORA COM AZUL EM VEZ DE PRETO */
+/* HERO COM AZUL */
 
 .hero{
 height:100vh;
 background:linear-gradient(rgba(27,52,67,.75),rgba(27,52,67,.75)),
-url(logo.png) center/cover no-repeat;
+url(img/logo.png) center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -132,8 +138,6 @@ background:var(--azul-escuro);
 transform:translateY(-4px);
 }
 
-/* SEÇÕES */
-
 section{
 padding:100px 8%;
 }
@@ -145,8 +149,6 @@ font-size:32px;
 color:var(--azul);
 font-weight:700;
 }
-
-/* PORTFOLIO */
 
 .portfolio{
 display:grid;
@@ -164,8 +166,6 @@ transition:.4s;
 transform:scale(1.05);
 }
 
-/* CTA */
-
 .cta{
 background:var(--azul);
 color:#fff;
@@ -178,11 +178,11 @@ margin-bottom:20px;
 font-size:32px;
 }
 
-/* FOOTER — AGORA AZUL */
+/* FOOTER AZUL */
 
 footer{
 background:#234255;
-color:#aaa;
+color:#ccc;
 text-align:center;
 padding:40px 20px;
 }
@@ -195,7 +195,7 @@ gap:20px;
 }
 
 .footer-social a{
-color:#aaa;
+color:#ccc;
 font-size:20px;
 transition:.3s;
 }
@@ -240,7 +240,11 @@ margin-top:10px;
 <body>
 
 <header>
-<h1><a href="#topo">logo.png</a></h1>
+<h1>
+<a href="#topo">
+<img src="img/logo.png" alt="Marcenaria Oliveira's">
+</a>
+</h1>
 
 <nav>
 <a href="#portfolio">Portfólio</a>
