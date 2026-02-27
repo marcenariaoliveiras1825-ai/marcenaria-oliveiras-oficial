@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" translate="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
 <title>Marcenaria Oliveira's | Móveis Planejados Sob Medida</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 :root{
---azul-topo:#0f2f3f;       /* azul petróleo forte */
---azul-meio:#163f56;       /* transição */
---azul-base:#1f4e6b;       /* azul principal */
+--azul-petroleo:#0f2f3f;
+--overlay:rgba(10,35,50,0.85);
 }
 
 *{
@@ -30,21 +30,16 @@ scroll-behavior:smooth;
 body{
 color:#fff;
 padding-top:90px;
-background:linear-gradient(
-180deg,
-var(--azul-topo) 0%,
-var(--azul-meio) 35%,
-var(--azul-base) 100%
-);
+background:var(--azul-petroleo);
 }
 
-/* HEADER PETRÓLEO */
+/* HEADER */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:var(--azul-topo);
+background:var(--azul-petroleo);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -52,13 +47,9 @@ align-items:center;
 z-index:1000;
 }
 
-/* LOGO */
-
 .logo img{
 height:60px;
 }
-
-/* NAV */
 
 nav{
 display:flex;
@@ -92,84 +83,74 @@ font-size:18px;
 
 .hero{
 height:100vh;
+position:relative;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:0 20px;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(var(--overlay), var(--overlay)),
+url('img/hero-cozinha.jpg') center/cover no-repeat;
+animation:zoom 20s ease-in-out infinite alternate;
+z-index:-1;
+}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
 }
 
 .hero h2{
-font-size:48px;
+font-size:56px;
+font-weight:800;
 margin-bottom:20px;
+text-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:30px;
+margin-bottom:35px;
 max-width:700px;
+opacity:0.95;
 }
 
 /* BOTÃO */
 
 .btn{
 background:#fff;
-color:var(--azul-base);
-padding:15px 35px;
+color:var(--azul-petroleo);
+padding:16px 40px;
 text-decoration:none;
-border-radius:6px;
-font-weight:600;
-transition:.3s;
+border-radius:50px;
+font-weight:700;
+letter-spacing:0.5px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:.3s ease;
 }
 
 .btn:hover{
-background:#e5e5e5;
-}
-
-/* SEÇÕES */
-
-section{
-padding:100px 8%;
-}
-
-.titulo{
-text-align:center;
-margin-bottom:60px;
-font-size:32px;
-font-weight:700;
-color:#fff;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-.portfolio img{
-width:100%;
-border-radius:10px;
-}
-
-/* CTA */
-
-.cta{
-text-align:center;
-padding:80px 20px;
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
 
 footer{
-background:var(--azul-topo);
+background:var(--azul-petroleo);
 text-align:center;
 padding:40px 20px;
 }
 
-/* WHATS FIXO */
+/* WHATS */
 
 .whatsapp{
 position:fixed;
@@ -181,11 +162,12 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 @media(max-width:768px){
 .hero h2{
-font-size:32px;
+font-size:34px;
 }
 header{
 flex-direction:column;
@@ -205,6 +187,7 @@ margin-top:10px;
 <body>
 
 <header>
+
 <a href="#topo" class="logo">
 <img src="img/logo.png" alt="Marcenaria Oliveira's">
 </a>
@@ -217,11 +200,11 @@ margin-top:10px;
 <a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
-
 <a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
 <i class="fab fa-facebook-f"></i>
 </a>
 </div>
+
 </nav>
 </header>
 
@@ -231,25 +214,6 @@ margin-top:10px;
 
 <a class="btn" href="https://wa.me/5544999438651" target="_blank">
 Solicitar Orçamento
-</a>
-</section>
-
-<section id="portfolio">
-<h2 class="titulo">Portfólio</h2>
-
-<div class="portfolio">
-<img src="foto1.jpg">
-<img src="foto2.jpg">
-<img src="foto3.jpg">
-<img src="foto4.jpg">
-</div>
-</section>
-
-<section class="cta" id="contato">
-<h2>Vamos transformar seu projeto em realidade?</h2>
-
-<a class="btn" href="https://wa.me/5544999438651" target="_blank">
-Falar no WhatsApp
 </a>
 </section>
 
