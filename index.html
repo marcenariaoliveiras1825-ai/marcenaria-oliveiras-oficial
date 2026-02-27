@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br" translate="no">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google" content="notranslate">
 <title>Marcenaria Oliveira's | Móveis Planejados Sob Medida</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 :root{
---azul-petroleo:#0f2f3f;
 --azul:#234255;
 --azul-escuro:#1b3443;
+--branco:#ffffff;
+--cinza:#f4f4f4;
 }
 
 *{
@@ -29,8 +29,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:var(--azul-petroleo);
-color:#fff;
+background:#fff;
+color:#333;
 padding-top:90px;
 }
 
@@ -40,16 +40,21 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:#0b2532; /* azul mais escuro (tom sobre tom) */
+background:rgba(35,66,85,.95);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+color:#fff;
 z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-.logo img{
-height:60px;
+header h1 a{
+color:#fff;
+text-decoration:none;
+font-size:22px;
+font-weight:700;
 }
 
 nav{
@@ -69,6 +74,8 @@ nav a:hover{
 opacity:.7;
 }
 
+/* REDES SOCIAIS */
+
 .social{
 margin-left:30px;
 display:flex;
@@ -78,80 +85,162 @@ gap:15px;
 .social a{
 color:#fff;
 font-size:18px;
+transition:.3s;
+}
+
+.social a:hover{
+transform:translateY(-3px);
+opacity:.7;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-position:relative;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('img/hero-cozinha.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+color:#fff;
 padding:0 20px;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-linear-gradient(rgba(10,35,50,0.85), rgba(10,35,50,0.75)),
-url('img/hero-cozinha.jpg') center/cover no-repeat;
-z-index:-1;
+animation:fadeIn 1.2s ease-in-out;
 }
 
 .hero h2{
-font-size:56px;
-font-weight:800;
+font-size:48px;
 margin-bottom:20px;
-text-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:35px;
+margin-bottom:30px;
 max-width:700px;
-opacity:0.95;
 }
 
-/* BOTÃO */
-
 .btn{
-background:#fff;
-color:var(--azul-petroleo);
-padding:16px 40px;
+background:var(--azul);
+color:#fff;
+padding:15px 35px;
 text-decoration:none;
-border-radius:50px;
-font-weight:700;
-letter-spacing:0.5px;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-transition:.3s ease;
+border-radius:6px;
+font-weight:600;
+transition:.3s;
+display:inline-block;
 }
 
 .btn:hover{
+background:var(--azul-escuro);
 transform:translateY(-4px);
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
 /* SEÇÕES */
 
 section{
 padding:100px 8%;
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.titulo{
+text-align:center;
+margin-bottom:60px;
+font-size:32px;
+color:var(--azul);
+font-weight:700;
+}
+
+.servicos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.card{
+background:var(--cinza);
+padding:40px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.card h3{
+margin-bottom:15px;
+color:var(--azul);
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.portfolio img{
+width:100%;
+border-radius:10px;
+transition:.4s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+}
+
+/* CTA */
+
+.cta{
+background:var(--azul);
+color:#fff;
+text-align:center;
+padding:80px 20px;
+}
+
+.cta h2{
+margin-bottom:20px;
+font-size:32px;
 }
 
 /* FOOTER */
 
 footer{
-background:#0b2532;
+background:#111;
+color:#aaa;
 text-align:center;
 padding:40px 20px;
 }
 
-/* WHATS */
+.footer-social{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.footer-social a{
+color:#aaa;
+font-size:20px;
+transition:.3s;
+}
+
+.footer-social a:hover{
+color:#fff;
+transform:translateY(-3px);
+}
+
+/* WHATS FIXO */
 
 .whatsapp{
 position:fixed;
@@ -166,9 +255,18 @@ font-weight:600;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
+/* ANIMAÇÃO */
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVO */
+
 @media(max-width:768px){
 .hero h2{
-font-size:34px;
+font-size:32px;
 }
 header{
 flex-direction:column;
@@ -188,22 +286,15 @@ margin-top:10px;
 <body>
 
 <header>
-
-<a href="#topo" class="logo">
-<img src="img/logo.png" alt="Marcenaria Oliveira's">
-</a>
-
+<h1><a href="#topo">Marcenaria Oliveira's</a></h1>
 <nav>
+<a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
 
 <div class="social">
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
+<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
 </div>
 
 </nav>
@@ -212,19 +303,75 @@ margin-top:10px;
 <section class="hero" id="topo">
 <h2>Móveis Planejados Sob Medida</h2>
 <p>Projetos personalizados que unem funcionalidade, estética e acabamento profissional.</p>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">Solicitar Orçamento</a>
+</section>
 
-<a class="btn" href="https://wa.me/5544999438651" target="_blank">
-Solicitar Orçamento
-</a>
+<section id="servicos">
+<h2 class="titulo">Nossos Serviços</h2>
+<div class="servicos">
+<div class="card">
+<h3>Cozinhas Planejadas</h3>
+<p>Funcionalidade e elegância sob medida.</p>
+</div>
+<div class="card">
+<h3>Guarda-Roupas</h3>
+<p>Organização inteligente e acabamento impecável.</p>
+</div>
+<div class="card">
+<h3>Painéis e Salas</h3>
+<p>Design moderno e integração perfeita.</p>
+</div>
+<div class="card">
+<h3>Projetos Comerciais</h3>
+<p>Soluções personalizadas para lojas e escritórios.</p>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="titulo">Portfólio</h2>
+<div class="portfolio">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+</div>
+</section>
+
+<section class="cta" id="contato">
+<h2>Vamos transformar seu projeto em realidade?</h2>
+<a class="btn" href="https://wa.me/5544999438651" target="_blank">Falar no WhatsApp</a>
 </section>
 
 <footer>
 <p>© 2026 Marcenaria Oliveira's - Todos os direitos reservados</p>
+
+<div class="footer-social">
+<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5544999438651" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
+WhatsApp
 </a>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(sec => {
+const top = window.scrollY;
+const offset = sec.offsetTop - 400;
+const height = sec.offsetHeight;
+
+if(top >= offset && top < offset + height){
+sec.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
