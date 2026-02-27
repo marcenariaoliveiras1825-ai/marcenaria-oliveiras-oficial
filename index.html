@@ -13,7 +13,8 @@
 
 :root{
 --azul-petroleo:#0f2f3f;
---overlay:rgba(10,35,50,0.85);
+--azul:#234255;
+--azul-escuro:#1b3443;
 }
 
 *{
@@ -28,9 +29,9 @@ scroll-behavior:smooth;
 }
 
 body{
+background:var(--azul-petroleo);
 color:#fff;
 padding-top:90px;
-background:var(--azul-petroleo);
 }
 
 /* HEADER */
@@ -39,7 +40,7 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:var(--azul-petroleo);
+background:#0b2532; /* azul mais escuro (tom sobre tom) */
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -98,15 +99,9 @@ content:"";
 position:absolute;
 inset:0;
 background:
-linear-gradient(var(--overlay), var(--overlay)),
+linear-gradient(rgba(10,35,50,0.85), rgba(10,35,50,0.75)),
 url('img/hero-cozinha.jpg') center/cover no-repeat;
-animation:zoom 20s ease-in-out infinite alternate;
 z-index:-1;
-}
-
-@keyframes zoom{
-0%{transform:scale(1);}
-100%{transform:scale(1.08);}
 }
 
 .hero h2{
@@ -142,10 +137,16 @@ transform:translateY(-4px);
 box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
+/* SEÇÕES */
+
+section{
+padding:100px 8%;
+}
+
 /* FOOTER */
 
 footer{
-background:var(--azul-petroleo);
+background:#0b2532;
 text-align:center;
 padding:40px 20px;
 }
