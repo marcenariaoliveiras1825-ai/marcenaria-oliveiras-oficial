@@ -11,7 +11,8 @@
 <style>
 
 :root{
---azul:#1f4e6b; /* AZUL MAIS VIVO */
+--azul-principal:#1f4e6b;
+--azul-escuro:#16394f;
 }
 
 *{
@@ -23,22 +24,21 @@ font-family:'Montserrat',sans-serif;
 
 html{
 scroll-behavior:smooth;
-background:var(--azul);
 }
 
 body{
-background:var(--azul);
+background:var(--azul-principal);
 color:#fff;
 padding-top:90px;
 }
 
-/* HEADER */
+/* HEADER MAIS ESCURO */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:var(--azul);
+background:var(--azul-escuro);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -64,7 +64,14 @@ color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
+transition:.3s;
 }
+
+nav a:hover{
+opacity:.7;
+}
+
+/* SOCIAL */
 
 .social{
 margin-left:30px;
@@ -75,13 +82,18 @@ gap:15px;
 .social a{
 color:#fff;
 font-size:18px;
+transition:.3s;
+}
+
+.social a:hover{
+opacity:.7;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-background:var(--azul);
+background:var(--azul-principal);
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -101,20 +113,27 @@ margin-bottom:30px;
 max-width:700px;
 }
 
+/* BOTÃO */
+
 .btn{
 background:#fff;
-color:var(--azul);
+color:var(--azul-principal);
 padding:15px 35px;
 text-decoration:none;
 border-radius:6px;
 font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e5e5e5;
 }
 
 /* SEÇÕES */
 
 section{
 padding:100px 8%;
-background:var(--azul);
+background:var(--azul-principal);
 }
 
 .titulo{
@@ -141,7 +160,7 @@ border-radius:10px;
 /* CTA */
 
 .cta{
-background:var(--azul);
+background:var(--azul-principal);
 text-align:center;
 padding:80px 20px;
 }
@@ -149,10 +168,9 @@ padding:80px 20px;
 /* FOOTER */
 
 footer{
-background:var(--azul);
+background:var(--azul-escuro);
 text-align:center;
 padding:40px 20px;
-color:#fff;
 }
 
 /* WHATS FIXO */
