@@ -230,7 +230,7 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* WHATSAPP */
+/* BOTÃO WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -238,10 +238,19 @@ bottom:25px;
 right:25px;
 background:#25d366;
 color:#fff;
-padding:15px 20px;
+padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.05);
 }
 
 /* RESPONSIVO */
@@ -289,7 +298,7 @@ font-size:32px;
 
 <p>Projetos personalizados com acabamento profissional em Maringá e região.</p>
 
-<a class="btn" href="https://wa.me/5544999438651?text=Olá%20vim%20pelo%20site%20e%20quero%20um%20orçamento">
+<a class="btn" href="https://wa.me/5544999438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveira's%20e%20quero%20um%20orçamento" target="_blank">
 Solicitar Orçamento
 </a>
 
@@ -367,38 +376,13 @@ Atendemos Maringá, Sarandi, Paiçandu e região.
 
 </section>
 
-<section>
-
-<h2 class="titulo">Depoimentos</h2>
-
-<div class="depoimentos">
-
-<div class="depoimento">
-<p>"Excelente acabamento e atendimento."</p>
-<strong>Cliente - Maringá</strong>
-</div>
-
-<div class="depoimento">
-<p>"Minha cozinha ficou perfeita."</p>
-<strong>Cliente - Sarandi</strong>
-</div>
-
-<div class="depoimento">
-<p>"Preço justo e entrega no prazo."</p>
-<strong>Cliente - Paiçandu</strong>
-</div>
-
-</div>
-
-</section>
-
 <section class="cta" id="contato">
 
 <h2>Vamos transformar seu projeto em realidade?</h2>
 
 <br>
 
-<a class="btn" href="https://wa.me/5544999438651?text=Olá%20quero%20um%20orçamento%20de%20móveis%20planejados">
+<a class="btn" href="https://wa.me/5544999438651?text=Olá%20quero%20um%20orçamento%20de%20móveis%20planejados" target="_blank">
 Falar no WhatsApp
 </a>
 
@@ -430,34 +414,13 @@ loading="lazy">
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5544999438651?text=Olá%20vim%20pelo%20site">
+<a class="whatsapp"
+href="https://wa.me/5544999438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveira's%20e%20quero%20um%20orçamento%20de%20móveis%20planejados"
+target="_blank">
+
 <i class="fab fa-whatsapp"></i> WhatsApp
+
 </a>
-
-<script>
-
-const imagens = document.querySelectorAll(".portfolio img");
-
-const modal = document.createElement("div");
-modal.classList.add("modal");
-
-const modalImg = document.createElement("img");
-
-modal.appendChild(modalImg);
-document.body.appendChild(modal);
-
-imagens.forEach(img=>{
-img.addEventListener("click",()=>{
-modal.style.display="flex";
-modalImg.src=img.src;
-});
-});
-
-modal.addEventListener("click",()=>{
-modal.style.display="none";
-});
-
-</script>
 
 </body>
 </html>
