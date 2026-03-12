@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Marcenaria Oliveira's | Móveis Planejados em Maringá</title>
+<title>Marcenaria Oliveira's | Móveis Planejados</title>
 
 <meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Sarandi e Paiçandu.">
 
@@ -100,6 +100,12 @@ padding:15px 35px;
 border-radius:6px;
 text-decoration:none;
 font-weight:600;
+display:inline-block;
+transition:0.3s;
+}
+
+.btn:hover{
+background:var(--azul-escuro);
 }
 
 /* SEÇÕES */
@@ -128,6 +134,11 @@ background:var(--cinza);
 padding:40px;
 border-radius:10px;
 text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
 }
 
 /* SOBRE */
@@ -181,26 +192,29 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* WHATSAPP */
+/* BOTÃO WHATSAPP */
 
 .whatsapp{
 position:fixed;
 bottom:25px;
 right:25px;
+width:60px;
+height:60px;
 background:#25d366;
 color:#fff;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
+border-radius:50%;
 display:flex;
 align-items:center;
-gap:8px;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
 box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:999;
+transition:0.3s;
 }
 
 .whatsapp:hover{
-transform:scale(1.05);
+transform:scale(1.1);
 }
 
 @media(max-width:768px){
@@ -263,7 +277,7 @@ Solicitar Orçamento
 <br>
 
 <a class="btn"
-href="https://wa.me/4491438651?text=Olá%20quero%20um%20orçamento%20de%20móveis%20planejados"
+href="https://wa.me/554491438651?text=Olá%20quero%20um%20orçamento%20de%20móveis%20planejados"
 target="_blank">
 
 Falar no WhatsApp
@@ -281,10 +295,12 @@ Falar no WhatsApp
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/4491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras%20e%20gostaria%20de%20um%20orçamento"
-target="_blank">
+href="https://wa.me/554491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras%20e%20gostaria%20de%20um%20orçamento"
+target="_blank"
+rel="noopener noreferrer"
+title="Falar no WhatsApp">
 
-<i class="fab fa-whatsapp"></i> WhatsApp
+<i class="fab fa-whatsapp"></i>
 
 </a>
 
