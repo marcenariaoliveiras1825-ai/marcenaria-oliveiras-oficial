@@ -8,7 +8,7 @@
 
 <title>Marcenaria Oliveira's | Móveis Planejados em Maringá</title>
 
-<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados sob medida em Maringá, Paiçandu e região.">
+<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados sob medida em Maringá e região.">
 
 <link rel="icon" href="imagem/favicon.png">
 
@@ -34,6 +34,7 @@ font-family:'Montserrat',sans-serif;
 body{
 padding-top:90px;
 color:#333;
+background:#fff;
 }
 
 /* HEADER */
@@ -83,7 +84,7 @@ min-height:100vh;
 
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('imagem/hero-cozinha.jpg') center/cover;
+url('imagem/cozinha-planejada-completa.jpg') center/cover;
 
 display:flex;
 flex-direction:column;
@@ -143,19 +144,20 @@ text-align:center;
 
 /* PORTFÓLIO */
 
-.portfolio{
+.portfolio-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+gap:25px;
 }
 
-.portfolio img{
+.portfolio-grid img{
 width:100%;
 border-radius:10px;
 transition:.4s;
+cursor:pointer;
 }
 
-.portfolio img:hover{
+.portfolio-grid img:hover{
 transform:scale(1.05);
 }
 
@@ -184,7 +186,7 @@ justify-content:center;
 gap:20px;
 }
 
-/* WHATS */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -206,7 +208,7 @@ text-decoration:none;
 <header>
 
 <div class="logo">
-<img src="imagem/logo.png">
+<img src="imagem/logo.png" alt="Marcenaria Oliveira's">
 </div>
 
 <nav>
@@ -283,7 +285,7 @@ Solicitar Orçamento
 
 <h2 class="titulo">Projetos Recentes</h2>
 
-<div class="portfolio">
+<div class="portfolio-grid">
 
 <img src="imagem/cozinha-planejada-preta.jpg">
 <img src="imagem/cozinha-planejada-completa.jpg">
@@ -295,10 +297,8 @@ Solicitar Orçamento
 <img src="imagem/escritorio-moderno-prateleiras.jpg">
 <img src="imagem/escritorio-branco-planejado.jpg">
 <img src="imagem/estacao-trabalho-planejada.jpg">
-<img src="imagem/mesa-lateral-industrial.jpg">
 <img src="imagem/gabinete-banheiro-planejado.jpg">
 <img src="imagem/gaveteiro-moderno.jpg">
-<img src="imagem/armario-planejado-madeira.jpg">
 <img src="imagem/casinha-infantil-madeira.jpg">
 
 </div>
