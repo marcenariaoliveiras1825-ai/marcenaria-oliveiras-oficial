@@ -6,23 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Marcenaria Oliveira's | Móveis Planejados em Maringá</title>
+<title>Marcenaria Oliveira's | Móveis Planejados</title>
 
-<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados sob medida em Maringá, Paiçandu e região.">
+<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Paiçandu e região.">
 
 <link rel="icon" href="img/favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-
-:root{
---azul:#234255;
---azul-escuro:#1b3443;
---cinza:#f4f4f4;
-}
 
 *{
 margin:0;
@@ -36,9 +28,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
+background:#ffffff;
 color:#333;
-padding-top:90px;
 }
 
 /* HEADER */
@@ -52,18 +43,11 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-color:#fff;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
 .logo img{
 height:50px;
-}
-
-nav{
-display:flex;
-align-items:center;
 }
 
 nav a{
@@ -71,39 +55,22 @@ color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-opacity:.7;
-}
-
-.social{
-margin-left:30px;
-display:flex;
-gap:15px;
-}
-
-.social a{
-color:#fff;
-font-size:18px;
 }
 
 /* HERO */
 
 .hero{
-min-height:100vh;
+height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('img/hero-cozinha.jpg') center center / cover no-repeat;
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("img/hero-cozinha.jpg") center/cover;
 
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 color:#fff;
-padding:0 20px;
+padding:20px;
 }
 
 .hero h1{
@@ -112,44 +79,29 @@ margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:30px;
 max-width:700px;
+margin-bottom:30px;
 }
-
-/* BOTÃO */
 
 .btn{
-background:var(--azul);
+background:#234255;
 color:#fff;
 padding:15px 35px;
-text-decoration:none;
 border-radius:6px;
-font-weight:600;
-transition:.3s;
-display:inline-block;
-}
-
-.btn:hover{
-background:var(--azul-escuro);
-transform:translateY(-4px);
+text-decoration:none;
 }
 
 /* SEÇÕES */
 
 section{
-min-height:100vh;
-padding:120px 8% 80px;
-display:flex;
-flex-direction:column;
-justify-content:center;
+padding:100px 8%;
 }
 
 .titulo{
 text-align:center;
-margin-bottom:60px;
 font-size:32px;
-color:var(--azul);
+margin-bottom:60px;
+color:#234255;
 }
 
 /* SERVIÇOS */
@@ -157,47 +109,59 @@ color:var(--azul);
 .servicos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
+gap:30px;
 }
 
 .card{
-background:var(--cinza);
+background:#f4f4f4;
 padding:40px;
 border-radius:10px;
 text-align:center;
-transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 30px rgba(0,0,0,.08);
-}
-
-/* PORTFÓLIO */
+/* PORTFÓLIO PINTEREST */
 
 .portfolio{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+background:#f7f7f7;
 }
 
-.portfolio img{
+.galeria{
+column-count:3;
+column-gap:15px;
+}
+
+.galeria img{
 width:100%;
+margin-bottom:15px;
 border-radius:10px;
-transition:.4s;
+transition:0.3s;
+cursor:pointer;
 }
 
-.portfolio img:hover{
-transform:scale(1.05);
+.galeria img:hover{
+transform:scale(1.03);
 }
 
-/* CTA */
+/* RESPONSIVO */
 
-.cta{
-background:var(--azul);
-color:#fff;
-text-align:center;
-padding:80px 20px;
+@media(max-width:900px){
+
+.galeria{
+column-count:2;
+}
+
+}
+
+@media(max-width:600px){
+
+.galeria{
+column-count:1;
+}
+
+.hero h1{
+font-size:32px;
+}
+
 }
 
 /* FOOTER */
@@ -209,184 +173,4 @@ text-align:center;
 padding:40px 20px;
 }
 
-.footer-social{
-margin-top:20px;
-display:flex;
-justify-content:center;
-gap:20px;
-}
-
-.footer-social a{
-color:#fff;
-font-size:20px;
-}
-
 /* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25d366;
-color:#fff;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-<a href="#topo">
-<img src="img/logo.png" alt="Marcenaria Oliveira's">
-</a>
-</div>
-
-<nav>
-
-<a href="#servicos">Serviços</a>
-<a href="#portfolio">Portfólio</a>
-<a href="#contato">Contato</a>
-
-<div class="social">
-
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-</div>
-
-</nav>
-
-</header>
-
-<section class="hero" id="topo">
-
-<h1>Móveis Planejados Sob Medida</h1>
-
-<p>
-Projetos personalizados que unem funcionalidade, estética e acabamento profissional.
-</p>
-
-<a class="btn"
-href="https://wa.me/5544999438651"
-target="_blank">
-
-Solicitar Orçamento
-
-</a>
-
-</section>
-
-<section id="servicos">
-
-<h2 class="titulo">Nossos Serviços</h2>
-
-<div class="servicos">
-
-<div class="card">
-<h3>Cozinhas Planejadas</h3>
-<p>Funcionalidade e elegância sob medida.</p>
-</div>
-
-<div class="card">
-<h3>Guarda-Roupas</h3>
-<p>Organização inteligente e acabamento impecável.</p>
-</div>
-
-<div class="card">
-<h3>Painéis e Salas</h3>
-<p>Design moderno e integração perfeita.</p>
-</div>
-
-<div class="card">
-<h3>Projetos Comerciais</h3>
-<p>Soluções personalizadas para lojas e escritórios.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="portfolio">
-
-<h2 class="titulo">Portfólio</h2>
-
-<div class="portfolio">
-
-<img src="img/cozinha-planejada-preta.jpg">
-<img src="img/cozinha-planejada-completa.jpg">
-<img src="img/cozinha-planejada-grande.jpg">
-<img src="img/cozinha-planejada-pequena.jpg">
-<img src="img/cozinha-planejada-branca-granito.jpg">
-<img src="img/cozinha-planejada-moderna-01.jpg">
-
-<img src="img/escritorio-planejado-maringa.jpg">
-<img src="img/escritorio-moderno-prateleiras.jpg">
-<img src="img/escritorio-branco-planejado.jpg">
-
-<img src="img/estacao-trabalho-planejada.jpg">
-<img src="img/mesa-lateral-industrial.jpg">
-<img src="img/gabinete-banheiro-planejado.jpg">
-<img src="img/gaveteiro-moderno.jpg">
-<img src="img/armario-planejado-madeira.jpg">
-<img src="img/casinha-infantil-madeira.jpg">
-
-</div>
-
-</section>
-
-<section class="cta" id="contato">
-
-<h2>Vamos transformar seu projeto em realidade?</h2>
-
-<a class="btn"
-href="https://wa.me/5544999438651"
-target="_blank">
-
-Falar no WhatsApp
-
-</a>
-
-</section>
-
-<footer>
-
-<p>© 2026 Marcenaria Oliveira's - Todos os direitos reservados</p>
-
-<div class="footer-social">
-
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-</div>
-
-</footer>
-
-<a class="whatsapp"
-href="https://wa.me/5544999438651"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i> WhatsApp
-
-</a>
-
-</body>
-</html>
