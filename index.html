@@ -14,6 +14,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 *{
@@ -50,11 +52,27 @@ z-index:1000;
 height:50px;
 }
 
+nav{
+display:flex;
+align-items:center;
+}
+
 nav a{
 color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
+}
+
+.social{
+margin-left:25px;
+display:flex;
+gap:15px;
+}
+
+.social a{
+color:#fff;
+font-size:18px;
 }
 
 /* HERO */
@@ -163,6 +181,14 @@ column-count:1;
 font-size:32px;
 }
 
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
 }
 
 /* FOOTER */
@@ -186,6 +212,7 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 </style>
@@ -198,7 +225,7 @@ font-weight:600;
 
 <div class="logo">
 <a href="#topo">
-<img src="img/logo.png" alt="Marcenaria Oliveira's">
+<img src="img/logo.png" alt="Marcenaria Oliveiras">
 </a>
 </div>
 
@@ -207,6 +234,18 @@ font-weight:600;
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
+
+<div class="social">
+
+<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+</div>
 
 </nav>
 
@@ -295,7 +334,9 @@ Solicitar Orçamento
 
 </section>
 
-<footer id="contato">
+<section id="contato">
+
+<footer>
 
 <p>© 2026 Marcenaria Oliveira's</p>
 
@@ -303,11 +344,13 @@ Solicitar Orçamento
 
 </footer>
 
+</section>
+
 <a class="whatsapp"
 href="https://wa.me/554491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras"
 target="_blank">
 
-WhatsApp
+<i class="fab fa-whatsapp"></i> WhatsApp
 
 </a>
 
