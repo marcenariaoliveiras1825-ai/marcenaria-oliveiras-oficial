@@ -8,9 +8,9 @@
 
 <title>Marcenaria Oliveira's | Móveis Planejados em Maringá</title>
 
-<meta name="description" content="Marcenaria Oliveira's em Maringá. Especialistas em móveis planejados, cozinhas, closets, painéis e guarda-roupas sob medida. Peça seu orçamento.">
+<meta name="description" content="Marcenaria Oliveira's em Maringá. Especialistas em móveis planejados, cozinhas, closets, painéis e guarda-roupas sob medida.">
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,92 +18,124 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f4f4;
+background:#f5f5f5;
 color:#333;
 }
 
+/* HEADER */
+
 header{
 background:#111;
-color:white;
-padding:20px;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:sticky;
+top:0;
+z-index:999;
 }
 
 header h1{
+color:white;
 font-size:22px;
 }
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
-font-weight:bold;
+font-weight:500;
+transition:0.3s;
 }
 
+nav a:hover{
+color:#caa46a;
+}
+
+/* HERO */
+
 .hero{
-height:500px;
-background:url('cozinha.jpg') center/cover;
+height:90vh;
+background:url('cozinha.jpg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 }
 
-.hero div{
+.hero-box{
 background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:10px;
+padding:50px;
+border-radius:12px;
+color:white;
+animation:fade 1.5s;
 }
 
 .hero h2{
-font-size:38px;
+font-size:40px;
 margin-bottom:15px;
 }
 
 .hero p{
+margin-bottom:25px;
 font-size:18px;
-margin-bottom:20px;
 }
 
-.botao{
-background:#c79a5b;
+.btn{
+background:#caa46a;
 color:white;
-padding:12px 25px;
+padding:14px 28px;
+border-radius:6px;
 text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+font-weight:600;
+transition:0.3s;
 }
+
+.btn:hover{
+background:#b89255;
+}
+
+/* SEÇÕES */
 
 section{
-padding:60px 10%;
+padding:80px 10%;
 }
 
 .titulo{
 text-align:center;
-margin-bottom:40px;
-font-size:32px;
+font-size:34px;
+margin-bottom:50px;
 }
+
+/* SERVIÇOS */
 
 .servicos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
-padding:30px;
+padding:35px;
 border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
-text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+/* GALERIA */
 
 .galeria{
 display:grid;
@@ -114,20 +146,40 @@ gap:20px;
 .galeria img{
 width:100%;
 border-radius:10px;
+transition:0.4s;
 }
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+/* DEPOIMENTOS */
 
 .depoimentos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .depoimento{
 background:white;
-padding:25px;
+padding:30px;
 border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* INSTAGRAM */
+
+.instagram{
+text-align:center;
+}
+
+.instagram a{
+display:inline-block;
+margin-top:20px;
+}
+
+/* FOOTER */
 
 footer{
 background:#111;
@@ -135,6 +187,8 @@ color:white;
 text-align:center;
 padding:30px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -147,6 +201,19 @@ padding:15px;
 border-radius:50%;
 text-decoration:none;
 box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -168,10 +235,9 @@ box-shadow:0 5px 10px rgba(0,0,0,0.3);
 
 </header>
 
-
 <section class="hero">
 
-<div>
+<div class="hero-box">
 
 <h2>Móveis Planejados em Maringá</h2>
 
@@ -179,14 +245,13 @@ box-shadow:0 5px 10px rgba(0,0,0,0.3);
 Projetos sob medida para cozinhas, closets, painéis e guarda-roupas.
 </p>
 
-<a class="botao" href="https://wa.me/554491438651" target="_blank">
-Pedir Orçamento
+<a class="btn" href="https://wa.me/554491438651" target="_blank">
+Solicitar Orçamento
 </a>
 
 </div>
 
 </section>
-
 
 <section id="servicos">
 
@@ -196,17 +261,17 @@ Pedir Orçamento
 
 <div class="card">
 <h3>Cozinhas Planejadas</h3>
-<p>Projetos modernos e funcionais.</p>
+<p>Design moderno e funcional.</p>
 </div>
 
 <div class="card">
 <h3>Guarda-Roupas</h3>
-<p>Sob medida para seu espaço.</p>
+<p>Projetos sob medida.</p>
 </div>
 
 <div class="card">
 <h3>Painéis para TV</h3>
-<p>Design moderno para sua sala.</p>
+<p>Elegância para sua sala.</p>
 </div>
 
 <div class="card">
@@ -217,7 +282,6 @@ Pedir Orçamento
 </div>
 
 </section>
-
 
 <section id="projetos">
 
@@ -236,7 +300,6 @@ Pedir Orçamento
 
 </section>
 
-
 <section>
 
 <h2 class="titulo">Clientes Satisfeitos</h2>
@@ -245,41 +308,52 @@ Pedir Orçamento
 
 <div class="depoimento">
 ⭐⭐⭐⭐⭐  
-"Excelente trabalho, cozinha perfeita."
+"Trabalho impecável e acabamento perfeito."  
 <br><br>
-Ana - Maringá
+Ana – Maringá
 </div>
 
 <div class="depoimento">
 ⭐⭐⭐⭐⭐  
-"Atendimento rápido e qualidade top."
+"Entrega rápida e qualidade excelente."  
 <br><br>
-Carlos - Sarandi
+Carlos – Sarandi
 </div>
 
 <div class="depoimento">
 ⭐⭐⭐⭐⭐  
-"Super recomendo a marcenaria."
+"Super recomendo a Marcenaria Oliveira's."  
 <br><br>
-Juliana - Paiçandu
+Juliana – Paiçandu
 </div>
 
 </div>
 
 </section>
 
+<section class="instagram">
+
+<h2 class="titulo">Acompanhe Nosso Instagram</h2>
+
+<p>Veja mais projetos e bastidores da marcenaria.</p>
+
+<a class="btn" href="https://instagram.com" target="_blank">
+Ver Instagram
+</a>
+
+</section>
 
 <section id="contato">
 
 <h2 class="titulo">Solicitar Orçamento</h2>
 
-<p style="text-align:center;margin-bottom:20px;">
-Clique no botão abaixo e fale diretamente conosco.
+<p style="text-align:center;margin-bottom:25px;">
+Clique abaixo e fale diretamente conosco no WhatsApp.
 </p>
 
 <div style="text-align:center;">
 
-<a class="botao" href="https://wa.me/554491438651" target="_blank">
+<a class="btn" href="https://wa.me/554491438651" target="_blank">
 Falar no WhatsApp
 </a>
 
@@ -287,21 +361,18 @@ Falar no WhatsApp
 
 </section>
 
-
 <footer>
 
 <p>
 Marcenaria Oliveira's © 2026  
-Móveis planejados em Maringá, Sarandi e Paiçandu
+Móveis planejados em Maringá • Sarandi • Paiçandu
 </p>
 
 </footer>
 
-
 <a href="https://wa.me/554491438651" class="whatsapp" target="_blank">
 💬
 </a>
-
 
 </body>
 </html>
