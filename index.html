@@ -6,15 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Marcenaria Oliveira's | Móveis Planejados em Maringá</title>
+<title>Marcenaria Oliveira's | Móveis Planejados</title>
 
-<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Paiçandu e Sarandi. Cozinhas, guarda-roupas, painéis e móveis sob medida.">
-
-<meta name="keywords" content="marcenaria maringá, móveis planejados maringá, marcenaria paiçandu, móveis sob medida">
+<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Paiçandu e região.">
 
 <link rel="icon" href="img/favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -46,11 +46,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 .logo img{
 height:50px;
+}
+
+nav{
+display:flex;
+align-items:center;
 }
 
 nav a{
@@ -58,11 +62,19 @@ color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
-transition:0.3s;
 }
 
-nav a:hover{
-color:#c9d6df;
+/* SOCIAL */
+
+.social{
+margin-left:25px;
+display:flex;
+gap:15px;
+}
+
+.social a{
+color:#fff;
+font-size:20px;
 }
 
 /* HERO */
@@ -98,12 +110,6 @@ color:#fff;
 padding:15px 35px;
 border-radius:6px;
 text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#2f566e;
-transform:scale(1.05);
 }
 
 /* SEÇÕES */
@@ -132,15 +138,9 @@ background:#f4f4f4;
 padding:40px;
 border-radius:10px;
 text-align:center;
-transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
-}
-
-/* PORTFÓLIO ESTILO PINTEREST */
+/* PORTFÓLIO */
 
 .portfolio{
 background:#f7f7f7;
@@ -183,6 +183,14 @@ column-count:1;
 font-size:32px;
 }
 
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
 }
 
 /* FOOTER */
@@ -202,16 +210,11 @@ bottom:25px;
 right:25px;
 background:#25d366;
 color:#fff;
-padding:15px 22px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-transition:0.3s;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
+box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 </style>
@@ -224,7 +227,7 @@ transform:scale(1.1);
 
 <div class="logo">
 <a href="#topo">
-<img src="img/logo.png" alt="Marcenaria Oliveira's">
+<img src="img/logo.png" alt="Marcenaria Oliveiras">
 </a>
 </div>
 
@@ -233,6 +236,18 @@ transform:scale(1.1);
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
+
+<div class="social">
+
+<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+</div>
 
 </nav>
 
@@ -249,7 +264,7 @@ Projetos personalizados com acabamento profissional em Maringá e região.
 </p>
 
 <a class="btn"
-href="https://wa.me/554491438651"
+href="https://wa.me/554491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras"
 target="_blank">
 
 Solicitar Orçamento
@@ -296,23 +311,22 @@ Solicitar Orçamento
 
 <div class="galeria">
 
-<img src="img/cozinha-planejada-preta.jpg" loading="lazy">
-<img src="img/cozinha-planejada-completa.jpg" loading="lazy">
-<img src="img/cozinha-planejada-grande.jpg" loading="lazy">
-<img src="img/cozinha-planejada-pequena.jpg" loading="lazy">
-<img src="img/cozinha-planejada-branca-granito.jpg" loading="lazy">
-<img src="img/cozinha-planejada-moderna-01.jpg" loading="lazy">
+<img src="img/banheiro%20provencal.jpeg">
+<img src="img/cama%20infantil%20mdf%20e%20madeira.jpeg">
+<img src="img/cozinha%20forno.jpeg">
+<img src="img/cozinha%20provencal%20branca%20diamante%20.jpeg">
+<img src="img/cristaleira.jpeg">
+<img src="img/guarda%20roupa%20%20sapateira%20.jpeg">
+<img src="img/guarda%20roupa%20carla%20.jpeg">
+<img src="img/guardaroupa%20estefane.jpeg">
+<img src="img/mesa%20naill.jpeg">
 
-<img src="img/gabinete-banheiro-provencal.jpg" loading="lazy">
-<img src="img/cama-infantil-casinha-madeira.jpg" loading="lazy">
-<img src="img/cozinha-torre-quente-geladeira.jpg" loading="lazy">
-<img src="img/cozinha-provencal-branca-diamante.jpg" loading="lazy">
-
-<img src="img/cristaleira-planejada.jpg" loading="lazy">
-<img src="img/guarda-roupa-sapateira.jpg" loading="lazy">
-<img src="img/guarda-roupa-planejado-carla.jpg" loading="lazy">
-<img src="img/guarda-roupa-planejado-estefane.jpg" loading="lazy">
-<img src="img/mesa-escritorio-em-l.jpg" loading="lazy">
+<img src="img/cozinha-planejada-preta.jpg">
+<img src="img/cozinha-planejada-completa.jpg">
+<img src="img/cozinha-planejada-grande.jpg">
+<img src="img/cozinha-planejada-pequena.jpg">
+<img src="img/cozinha-planejada-branca-granito.jpg">
+<img src="img/cozinha-planejada-moderna-01.jpg">
 
 </div>
 
@@ -321,16 +335,15 @@ Solicitar Orçamento
 <footer id="contato">
 
 <p>© 2026 Marcenaria Oliveira's</p>
-
 <p>Maringá • Paiçandu • Sarandi</p>
 
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/554491438651"
+href="https://wa.me/554491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras"
 target="_blank">
 
-WhatsApp
+<i class="fab fa-whatsapp"></i> WhatsApp
 
 </a>
 
