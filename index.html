@@ -120,66 +120,49 @@ border-radius:10px;
 text-align:center;
 }
 
-/* PORTFOLIO */
+/* PORTFÓLIO */
 
 .portfolio{
 background:#f7f7f7;
 }
 
 .galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+column-count:3;
+column-gap:15px;
 }
 
-.item{
-position:relative;
-overflow:hidden;
-border-radius:10px;
-}
-
-.item img{
+.galeria img{
 width:100%;
-display:block;
-transition:.4s;
+margin-bottom:15px;
+border-radius:10px;
+transition:0.3s;
 cursor:pointer;
 }
 
-.item:hover img{
-transform:scale(1.1);
+.galeria img:hover{
+transform:scale(1.03);
 }
 
-.item span{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-background:rgba(0,0,0,.6);
-color:#fff;
-padding:10px;
-font-size:14px;
-text-align:center;
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.galeria{
+column-count:2;
 }
 
-/* LIGHTBOX */
-
-#lightbox{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-justify-content:center;
-align-items:center;
-z-index:2000;
 }
 
-#lightbox img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
+@media(max-width:600px){
+
+.galeria{
+column-count:1;
+}
+
+.hero h1{
+font-size:32px;
+}
+
 }
 
 /* FOOTER */
@@ -240,7 +223,7 @@ Projetos personalizados com acabamento profissional em Maringá e região.
 </p>
 
 <a class="btn"
-href="https://wa.me/554491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras%20e%20gostaria%20de%20um%20orçamento"
+href="https://wa.me/554491438651?text=Olá%20vim%20pelo%20site%20da%20Marcenaria%20Oliveiras"
 target="_blank">
 
 Solicitar Orçamento
@@ -287,25 +270,26 @@ Solicitar Orçamento
 
 <div class="galeria">
 
-<div class="item">
-<img src="img/cozinha-planejada-preta.jpg" onclick="abrirImagem(this)">
-<span>Cozinha Planejada</span>
-</div>
+<!-- FOTOS NOVAS PRIMEIRO -->
 
-<div class="item">
-<img src="img/cozinha-planejada-completa.jpg" onclick="abrirImagem(this)">
-<span>Cozinha Completa</span>
-</div>
+<img src="img/banheiro%20provencal.jpeg">
+<img src="img/cama%20infantil%20mdf%20e%20madeira.jpeg">
+<img src="img/cozinha%20forno.jpeg">
+<img src="img/cozinha%20provencal%20branca%20diamante%20.jpeg">
+<img src="img/cristaleira.jpeg">
+<img src="img/guarda%20roupa%20%20sapateira%20.jpeg">
+<img src="img/guarda%20roupa%20carla%20.jpeg">
+<img src="img/guardaroupa%20estefane.jpeg">
+<img src="img/mesa%20naill.jpeg">
 
-<div class="item">
-<img src="img/cozinha-planejada-grande.jpg" onclick="abrirImagem(this)">
-<span>Cozinha Moderna</span>
-</div>
+<!-- FOTOS ANTIGAS -->
 
-<div class="item">
-<img src="img/cozinha-planejada-pequena.jpg" onclick="abrirImagem(this)">
-<span>Cozinha Compacta</span>
-</div>
+<img src="img/cozinha-planejada-preta.jpg">
+<img src="img/cozinha-planejada-completa.jpg">
+<img src="img/cozinha-planejada-grande.jpg">
+<img src="img/cozinha-planejada-pequena.jpg">
+<img src="img/cozinha-planejada-branca-granito.jpg">
+<img src="img/cozinha-planejada-moderna-01.jpg">
 
 </div>
 
@@ -326,23 +310,6 @@ target="_blank">
 WhatsApp
 
 </a>
-
-<div id="lightbox" onclick="fecharImagem()">
-<img id="imagem-grande">
-</div>
-
-<script>
-
-function abrirImagem(img){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("imagem-grande").src=img.src;
-}
-
-function fecharImagem(){
-document.getElementById("lightbox").style.display="none";
-}
-
-</script>
 
 </body>
 </html>
