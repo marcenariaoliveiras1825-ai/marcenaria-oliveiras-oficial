@@ -24,74 +24,36 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
-body{
-background:#fff;
-color:#333;
-}
+body{background:#fff;color:#333;}
 
 /* HEADER */
-
 header{
-position:fixed;
-top:0;
-width:100%;
-background:#1b3443;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
+position:fixed;top:0;width:100%;
+background:#1b3443;padding:20px 8%;
+display:flex;justify-content:space-between;align-items:center;z-index:1000;
 }
 
-.logo img{
-height:50px;
-}
+.logo img{height:50px;}
 
-nav{
-display:flex;
-align-items:center;
-}
+nav{display:flex;align-items:center;}
 
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-}
+nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:500;}
 
 /* REDES */
+.social{margin-left:25px;display:flex;gap:15px;}
 
-.social{
-margin-left:25px;
-display:flex;
-gap:15px;
-}
-
-.social a{
-color:#fff;
-font-size:20px;
-}
+.social a{color:#fff;font-size:20px;}
 
 /* HERO PREMIUM */
-
 .hero{
 height:100vh;
-
 background:
 linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
 url("img/hero-cozinha.jpg") center/cover;
-
 display:flex;
 align-items:flex-end;
 justify-content:flex-start;
@@ -100,37 +62,18 @@ color:#fff;
 padding:80px 8%;
 }
 
-.hero div{
-max-width:600px;
-}
+.hero div{max-width:600px;}
 
-.hero h1{
-font-size:40px;
-line-height:1.2;
-margin-bottom:15px;
-}
+.hero h1{font-size:40px;line-height:1.2;margin-bottom:15px;}
 
-.hero p{
-font-size:18px;
-opacity:0.9;
-margin-bottom:0;
-}
+.hero p{font-size:18px;opacity:0.9;margin-bottom:0;}
 
 /* SEÇÕES */
+section{padding:100px 8%;}
 
-section{
-padding:100px 8%;
-}
-
-.titulo{
-text-align:center;
-font-size:32px;
-margin-bottom:60px;
-color:#234255;
-}
+.titulo{text-align:center;font-size:32px;margin-bottom:60px;color:#234255;}
 
 /* SERVIÇOS */
-
 .servicos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -138,76 +81,36 @@ gap:30px;
 }
 
 .card{
-background:#f4f4f4;
-padding:40px;
-border-radius:10px;
-text-align:center;
+background:#f4f4f4;padding:40px;border-radius:10px;text-align:center;
 }
 
 /* PORTFÓLIO */
+.portfolio{background:#f7f7f7;}
 
-.portfolio{
-background:#f7f7f7;
-}
-
-.galeria{
-column-count:3;
-column-gap:15px;
-}
+.galeria{column-count:3;column-gap:15px;}
 
 .galeria img{
-width:100%;
-margin-bottom:15px;
-border-radius:10px;
-transition:0.3s;
-cursor:pointer;
+width:100%;margin-bottom:15px;border-radius:10px;
+transition:0.3s;cursor:pointer;
 }
 
-.galeria img:hover{
-transform:scale(1.03);
-}
+.galeria img:hover{transform:scale(1.03);}
 
 /* RESPONSIVO */
-
 @media(max-width:900px){
-
-.galeria{
-column-count:2;
-}
-
+.galeria{column-count:2;}
 }
 
 @media(max-width:600px){
-
-.galeria{
-column-count:1;
-}
-
-.hero{
-align-items:flex-end;
-padding:60px 8%;
-}
-
-.hero h1{
-font-size:28px;
-}
-
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:10px;
-}
-
+.galeria{column-count:1;}
+.hero{padding:60px 8%;}
+.hero h1{font-size:28px;}
+header{flex-direction:column;}
+nav{margin-top:10px;}
 }
 
 /* DEPOIMENTOS */
-
-#depoimentos{
-background:#f4f4f4;
-padding:60px 8%;
-}
+#depoimentos{background:#f4f4f4;padding:60px 8%;}
 
 .depoimentos{
 display:grid;
@@ -216,44 +119,63 @@ gap:30px;
 }
 
 .depoimento{
-background:#fff;
-padding:30px;
-border-radius:10px;
+background:#fff;padding:30px;border-radius:10px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
-.estrelas{
-color:#ffc107;
-margin-bottom:10px;
+.estrelas{color:#ffc107;margin-bottom:10px;}
+
+.cliente{margin-top:10px;font-weight:600;color:#234255;}
+
+/* CONTATO */
+.contato-container{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+align-items:start;
+margin-bottom:40px;
 }
 
-.cliente{
-margin-top:10px;
-font-weight:600;
-color:#234255;
+.formulario{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.formulario input,
+.formulario textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.formulario button{
+background:#234255;
+color:#fff;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.mapa{width:100%;}
+
+@media(max-width:900px){
+.contato-container{grid-template-columns:1fr;}
 }
 
 /* FOOTER */
-
 footer{
-background:#1b3443;
-color:#fff;
-text-align:center;
-padding:40px 20px;
+background:#1b3443;color:#fff;text-align:center;padding:40px 20px;
 }
 
 /* WHATSAPP */
-
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
-background:#25d366;
-color:#fff;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
+bottom:25px;right:25px;
+background:#25d366;color:#fff;
+padding:15px 20px;border-radius:50px;
+text-decoration:none;font-weight:600;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
@@ -267,26 +189,18 @@ box-shadow:0 5px 15px rgba(0,0,0,.3);
 
 <div class="logo">
 <a href="#topo">
-<img src="img/logo.png" alt="Marcenaria Oliveiras">
+<img src="img/logo.png">
 </a>
 </div>
 
 <nav>
-
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
 
 <div class="social">
-
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-facebook-f"></i>
-</a>
-
+<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank"><i class="fab fa-facebook-f"></i></a>
 </div>
 
 </nav>
@@ -294,25 +208,13 @@ box-shadow:0 5px 15px rgba(0,0,0,.3);
 </header>
 
 <section class="hero" id="topo">
-
 <div>
-
 <h1>Móveis Planejados Sob Medida</h1>
-
-<p>
-Projetos exclusivos que unem estética, funcionalidade e acabamento de alto padrão.
-</p>
-
-<h2 style="display:none;">
-Marcenaria em Maringá, móveis planejados em Paiçandu e região
-</h2>
-
+<p>Projetos exclusivos que unem estética, funcionalidade e acabamento de alto padrão.</p>
 </div>
-
 </section>
 
 <section id="servicos">
-
 <h2 class="titulo">Nossos Serviços</h2>
 
 <div class="servicos">
@@ -338,38 +240,34 @@ Marcenaria em Maringá, móveis planejados em Paiçandu e região
 </div>
 
 </div>
-
 </section>
 
 <section id="portfolio" class="portfolio">
-
 <h2 class="titulo">Portfólio</h2>
 
 <div class="galeria">
 
-<img src="img/banheiro provencal.jpeg" loading="lazy">
-<img src="img/cama infantil mdf e madeira.jpeg" loading="lazy">
-<img src="img/cozinha forno.jpeg" loading="lazy">
-<img src="img/cozinha provencal branca diamante .jpeg" loading="lazy">
-<img src="img/cristaleira.jpeg" loading="lazy">
-<img src="img/guarda roupa  sapateira .jpeg" loading="lazy">
-<img src="img/guarda roupa carla .jpeg" loading="lazy">
-<img src="img/guardaroupa estefane.jpeg" loading="lazy">
-<img src="img/mesa naill.jpeg" loading="lazy">
+<img src="img/banheiro provencal.jpeg">
+<img src="img/cama infantil mdf e madeira.jpeg">
+<img src="img/cozinha forno.jpeg">
+<img src="img/cozinha provencal branca diamante .jpeg">
+<img src="img/cristaleira.jpeg">
+<img src="img/guarda roupa  sapateira .jpeg">
+<img src="img/guarda roupa carla .jpeg">
+<img src="img/guardaroupa estefane.jpeg">
+<img src="img/mesa naill.jpeg">
 
-<img src="img/cozinha-planejada-preta.jpg" loading="lazy">
-<img src="img/cozinha-planejada-completa.jpg" loading="lazy">
-<img src="img/cozinha-planejada-grande.jpg" loading="lazy">
-<img src="img/cozinha-planejada-pequena.jpg" loading="lazy">
-<img src="img/cozinha-planejada-branca-granito.jpg" loading="lazy">
-<img src="img/cozinha-planejada-moderna-01.jpg" loading="lazy">
+<img src="img/cozinha-planejada-preta.jpg">
+<img src="img/cozinha-planejada-completa.jpg">
+<img src="img/cozinha-planejada-grande.jpg">
+<img src="img/cozinha-planejada-pequena.jpg">
+<img src="img/cozinha-planejada-branca-granito.jpg">
+<img src="img/cozinha-planejada-moderna-01.jpg">
 
 </div>
-
 </section>
 
 <section id="depoimentos">
-
 <h2 class="titulo">Avaliações de Clientes</h2>
 
 <div class="depoimentos">
@@ -382,41 +280,59 @@ Marcenaria em Maringá, móveis planejados em Paiçandu e região
 
 <div class="depoimento">
 <div class="estrelas">★★★★★</div>
-<p>O guarda-roupa ficou exatamente como planejamos. Muito capricho no serviço.</p>
+<p>O guarda-roupa ficou exatamente como planejamos.</p>
 <div class="cliente">Estefane M. • Paiçandu</div>
 </div>
 
 <div class="depoimento">
 <div class="estrelas">★★★★★</div>
-<p>Atendimento excelente e móveis de alta qualidade. Recomendo!</p>
+<p>Atendimento excelente e móveis de alta qualidade.</p>
 <div class="cliente">Naill • Maringá</div>
 </div>
 
 </div>
-
-<p style="text-align:center; max-width:600px; margin:30px auto;">
-Cada projeto é pensado para refletir identidade, conforto e sofisticação em cada detalhe.
-</p>
-
 </section>
 
 <section id="contato">
 
-<footer>
+<h2 class="titulo">Contato</h2>
 
-<p>© 2026 Marcenaria Oliveira's</p>
-<p>Maringá • Paiçandu • Sarandi</p>
+<div class="contato-container">
 
-</footer>
+<div>
+<h3>Vamos tirar seu projeto do papel</h3>
+<p>Preencha ou fale pelo WhatsApp.</p>
+</div>
+
+<form class="formulario">
+<input type="text" placeholder="Nome">
+<input type="email" placeholder="Email">
+<textarea placeholder="Descreva seu projeto"></textarea>
+<button>Enviar</button>
+</form>
+
+<div>
+<p><strong>WhatsApp:</strong><br>(44) 9143-8651</p>
+<p><strong>Região:</strong><br>Maringá • Paiçandu • Sarandi</p>
+</div>
+
+</div>
+
+<div class="mapa">
+<iframe src="https://www.google.com/maps?q=Maringá+PR&output=embed"
+width="100%" height="350" style="border:0;border-radius:10px;"></iframe>
+</div>
 
 </section>
 
+<footer>
+<p>© 2026 Marcenaria Oliveira's</p>
+</footer>
+
 <a class="whatsapp"
-href="https://wa.me/554491438651?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento"
+href="https://wa.me/554491438651"
 target="_blank">
-
 <i class="fab fa-whatsapp"></i> WhatsApp
-
 </a>
 
 </body>
