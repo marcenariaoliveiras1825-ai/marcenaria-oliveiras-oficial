@@ -1,319 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<section id="sobre">
 
-<head>
+<h2 class="titulo">Quem Somos</h2>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="sobre-container">
 
-<title>Marcenaria Oliveira's | Móveis Planejados</title>
-
-<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Paiçandu e região.">
-<meta name="keywords" content="móveis planejados Maringá, marcenaria Maringá, móveis sob medida Paiçandu, móveis planejados Sarandi">
-
-<meta property="og:title" content="Marcenaria Oliveira's">
-<meta property="og:description" content="Móveis planejados sob medida em Maringá e região">
-<meta property="og:image" content="img/hero-cozinha.jpg">
-<meta property="og:type" content="website">
-
-<link rel="icon" href="img/favicon.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
-html{scroll-behavior:smooth;}
-body{background:#fff;color:#333;}
-
-header{
-position:fixed;top:0;width:100%;
-background:#1b3443;padding:20px 8%;
-display:flex;justify-content:space-between;align-items:center;z-index:1000;
-}
-
-.logo img{height:50px;}
-
-nav{display:flex;align-items:center;}
-nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:500;}
-
-.social{margin-left:25px;display:flex;gap:15px;}
-.social a{color:#fff;font-size:20px;}
-
-.hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-url("img/hero-cozinha.jpg") center/cover;
-display:flex;
-align-items:flex-end;
-justify-content:flex-start;
-text-align:left;
-color:#fff;
-padding:80px 8%;
-}
-
-.hero div{max-width:600px;}
-.hero h1{font-size:40px;margin-bottom:15px;}
-.hero p{font-size:18px;opacity:0.9;}
-
-section{padding:100px 8%;}
-.titulo{text-align:center;font-size:32px;margin-bottom:60px;color:#234255;}
-
-.servicos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:#f4f4f4;padding:40px;border-radius:10px;text-align:center;
-}
-
-.portfolio{background:#f7f7f7;}
-
-.galeria{column-count:3;column-gap:15px;}
-
-.galeria img{
-width:100%;margin-bottom:15px;border-radius:10px;
-transition:.3s;cursor:pointer;
-}
-
-.galeria img:hover{transform:scale(1.03);}
-
-@media(max-width:900px){
-.galeria{column-count:2;}
-}
-
-@media(max-width:600px){
-.galeria{column-count:1;}
-.hero{padding:60px 8%;}
-.hero h1{font-size:28px;}
-header{flex-direction:column;}
-nav{margin-top:10px;}
-}
-
-#depoimentos{background:#f4f4f4;padding:60px 8%;}
-
-.depoimentos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.depoimento{
-background:#fff;padding:30px;border-radius:10px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.estrelas{color:#ffc107;margin-bottom:10px;}
-.cliente{margin-top:10px;font-weight:600;color:#234255;}
-
-.contato-container{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:40px;
-margin-bottom:40px;
-}
-
-.formulario{
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.formulario input,
-.formulario textarea{
-padding:12px;border-radius:6px;border:1px solid #ccc;
-}
-
-.formulario button{
-background:#234255;color:#fff;
-padding:12px;border:none;border-radius:6px;cursor:pointer;
-}
-
-.mapa{width:100%;}
-
-@media(max-width:900px){
-.contato-container{grid-template-columns:1fr;}
-}
-
-footer{
-background:#1b3443;color:#fff;text-align:center;padding:40px 20px;
-}
-
-.whatsapp{
-position:fixed;bottom:25px;right:25px;
-background:#25d366;color:#fff;
-padding:15px 20px;border-radius:50px;
-text-decoration:none;font-weight:600;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-<a href="#topo"><img src="img/logo.png"></a>
+<div class="sobre-imagem">
+<img src="img/logo.png" alt="Marcenaria Oliveira's">
 </div>
 
-<nav>
-<a href="#servicos">Serviços</a>
-<a href="#portfolio">Portfólio</a>
-<a href="#contato">Contato</a>
+<div class="sobre-texto">
 
-<div class="social">
-<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-</div>
-
-</nav>
-
-</header>
-
-<section class="hero" id="topo">
-<div>
-<h1>Móveis Planejados Sob Medida</h1>
-<p>Projetos exclusivos que unem estética, funcionalidade e acabamento de alto padrão.</p>
-</div>
-</section>
-
-<section id="servicos">
-<h2 class="titulo">Nossos Serviços</h2>
-
-<div class="servicos">
-
-<div class="card">
-<h3>Cozinhas Planejadas</h3>
-<p>Projetos que combinam estética e funcionalidade para o seu espaço.</p>
-</div>
-
-<div class="card">
-<h3>Guarda-Roupas</h3>
-<p>Soluções inteligentes com acabamento sofisticado.</p>
-</div>
-
-<div class="card">
-<h3>Painéis e Salas</h3>
-<p>Design moderno com atenção a cada detalhe.</p>
-</div>
-
-<div class="card">
-<h3>Projetos Comerciais</h3>
-<p>Ambientes planejados para valorizar sua marca.</p>
-</div>
-
-</div>
-</section>
-
-<section id="portfolio" class="portfolio">
-<h2 class="titulo">Portfólio</h2>
-
-<div class="galeria">
-
-<img src="img/banheiro provencal.jpeg">
-<img src="img/cama infantil mdf e madeira.jpeg">
-<img src="img/cozinha forno.jpeg">
-<img src="img/cozinha provencal branca diamante .jpeg">
-<img src="img/cristaleira.jpeg">
-<img src="img/guarda roupa  sapateira .jpeg">
-<img src="img/guarda roupa carla .jpeg">
-<img src="img/guardaroupa estefane.jpeg">
-<img src="img/mesa naill.jpeg">
-
-<img src="img/cozinha-planejada-preta.jpg">
-<img src="img/cozinha-planejada-completa.jpg">
-<img src="img/cozinha-planejada-grande.jpg">
-<img src="img/cozinha-planejada-pequena.jpg">
-<img src="img/cozinha-planejada-branca-granito.jpg">
-<img src="img/cozinha-planejada-moderna-01.jpg">
-
-</div>
-</section>
-
-<section id="depoimentos">
-<h2 class="titulo">Avaliações de Clientes</h2>
-
-<div class="depoimentos">
-
-<div class="depoimento">
-<div class="estrelas">★★★★★</div>
-<p>Excelente trabalho! A cozinha ficou perfeita e o acabamento é impecável.</p>
-<div class="cliente">Carla S. • Maringá</div>
-</div>
-
-<div class="depoimento">
-<div class="estrelas">★★★★★</div>
-<p>O guarda-roupa ficou exatamente como planejamos.</p>
-<div class="cliente">Estefane M. • Paiçandu</div>
-</div>
-
-<div class="depoimento">
-<div class="estrelas">★★★★★</div>
-<p>Atendimento excelente e móveis de alta qualidade.</p>
-<div class="cliente">Naill • Maringá</div>
-</div>
-
-</div>
-</section>
-
-<section id="contato">
-
-<h2 class="titulo">Contato</h2>
-
-<div class="contato-container">
-
-<div>
-<h3>Vamos tirar seu projeto do papel</h3>
-<p>Entre em contato ou fale diretamente pelo WhatsApp.</p>
-</div>
-
-<form class="formulario">
-<input type="text" placeholder="Nome" required>
-<input type="email" placeholder="Email" required>
-<input type="text" placeholder="Assunto">
-<textarea placeholder="Descreva seu projeto"></textarea>
-<button type="submit">Enviar mensagem</button>
-</form>
-
-<div>
-<p><strong>Email:</strong><br>oliveiras.marcen@gmail.com</p>
-
-<p><strong>WhatsApp:</strong><br>(44) 9143-8651</p>
-
-<p><strong>Endereço:</strong><br>
-Rua Pedro Ferrari, 447<br>
-Jd. Pioneiros – Paiçandu/PR
+<p>
+A Marcenaria Oliveira’s nasceu com o propósito de transformar ambientes através de projetos únicos, onde cada detalhe carrega significado, identidade e sofisticação.
 </p>
 
-<p><strong>Atendimento:</strong><br>
-Seg a Sex – 08h às 18h
+<p>
+Nossa marca foi construída com base em valores que vão além do móvel. A letra “M”, presente em nosso símbolo, representa as asas de uma borboleta, homenageando “Meire” e simbolizando transformação, leveza e evolução em cada projeto realizado.
 </p>
-</div>
+
+<p>
+Os ramos de oliveira reforçam nossa essência familiar, trazendo consigo o significado de tradição, paz e solidez — pilares que sustentam nosso compromisso com a qualidade e a confiança de cada cliente.
+</p>
+
+<p>
+Mais do que móveis planejados, desenvolvemos soluções que unem estética, funcionalidade e acabamento de alto padrão, criando espaços que refletem personalidade e valorizam cada ambiente.
+</p>
 
 </div>
 
-<div class="mapa">
-<iframe 
-src="https://www.google.com/maps?q=Rua+Pedro+Ferrari+447+Paiçandu+PR&output=embed"
-width="100%" height="350"
-style="border:0;border-radius:10px;">
-</iframe>
 </div>
 
 </section>
-
-<footer>
-<p>© 2026 Marcenaria Oliveira's</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/554491438651" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-
-</body>
-</html>
