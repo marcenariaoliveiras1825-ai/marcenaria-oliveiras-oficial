@@ -1,64 +1,359 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcenaria Oliveira's</title>
+<html lang="pt-br">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Marcenaria Oliveira's | Móveis Planejados</title>
+
+<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Paiçandu e região.">
+
+<link rel="icon" href="img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+
+html{scroll-behavior:smooth;}
+
+body{background:#fff;color:#333;}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#1b3443;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo img{height:50px;}
+
+nav{display:flex;align-items:center;}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+}
+
+nav a:hover{opacity:.8;transition:.3s;}
+
+.social{
+margin-left:25px;
+display:flex;
+gap:15px;
+}
+
+.social a{
+color:#fff;
+font-size:20px;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url("img/hero-cozinha.jpg") center/cover;
+display:flex;
+align-items:flex-end;
+justify-content:flex-start;
+padding:80px 8%;
+color:#fff;
+}
+
+.hero div{max-width:600px;}
+
+.hero h1{font-size:40px;margin-bottom:15px;}
+
+.hero p{font-size:18px;opacity:.9;}
+
+/* SEÇÕES */
+section{padding:100px 8%;}
+
+.titulo{
+text-align:center;
+font-size:32px;
+margin-bottom:60px;
+color:#234255;
+}
+
+/* QUEM SOMOS */
+.sobre-container{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:60px;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+.sobre-imagem{
+padding:10px;
+background:#f5f5f5;
+border-radius:12px;
+}
+
+.sobre-imagem img{
+width:100%;
+height:auto;
+display:block;
+border-radius:10px;
+}
+
+.sobre-texto p{
+margin-bottom:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+/* SERVIÇOS */
+.servicos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#f4f4f4;
+padding:40px;
+border-radius:10px;
+text-align:center;
+}
+
+/* PORTFÓLIO */
+.portfolio{background:#f7f7f7;}
+
+.galeria{
+column-count:3;
+column-gap:15px;
+}
+
+.galeria img{
+width:100%;
+margin-bottom:15px;
+border-radius:10px;
+transition:.3s;
+}
+
+.galeria img:hover{transform:scale(1.03);}
+
+/* CONTATO */
+.contato-container{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+margin-bottom:40px;
+}
+
+.formulario{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.formulario input,
+.formulario textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.formulario button{
+background:#234255;
+color:#fff;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.mapa iframe{
+border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+background:#1b3443;
+color:#fff;
+text-align:center;
+padding:40px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:15px;
+right:15px;
+background:#25d366;
+color:#fff;
+padding:10px 14px;
+border-radius:50px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* RESPONSIVO TABLET */
+@media(max-width:900px){
+.sobre-container{grid-template-columns:1fr;text-align:center;}
+.contato-container{grid-template-columns:1fr;}
+.galeria{column-count:2;}
+}
+
+/* RESPONSIVO MOBILE REAL */
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+padding:15px 5%;
+}
+
+.logo img{
+height:45px;
+margin-bottom:10px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+nav a{
+margin:5px 10px;
+font-size:14px;
+}
+
+.social{
+margin-top:10px;
+}
+
+.hero{
+padding:60px 20px;
+align-items:center;
+text-align:center;
+}
+
+.hero div{
+max-width:100%;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+section{
+padding:70px 20px;
+}
+
+.titulo{
+font-size:26px;
+}
+
+.sobre-container{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.sobre-texto p{
+font-size:15px;
+line-height:1.5;
+}
+
+.galeria{
+column-count:1;
+}
+
+.contato-container{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- MENU ORIGINAL (mantém seu estilo, só garante os links) -->
-  <nav>
-    <ul>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#portfolio">Portfólio</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+<header>
 
-  <!-- CONTEÚDO (mantém tudo, só adiciona os IDs) -->
+<div class="logo">
+<a href="#topo"><img src="img/logo.png"></a>
+</div>
 
-  <section>
-    <h1>Topo do site</h1>
-  </section>
+<nav>
 
-  <!-- ✅ CORREÇÃO -->
-  <section id="servicos">
-    <h2>Serviços</h2>
-    <p>Conteúdo original aqui</p>
-  </section>
+<a href="#sobre">Quem Somos</a>
+<a href="#servicos">Serviços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#contato">Contato</a>
 
-  <!-- ✅ CORREÇÃO -->
-  <section id="portfolio">
-    <h2>Portfólio</h2>
-    <p>Conteúdo original aqui</p>
-  </section>
+<div class="social">
+<a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/share/1ar52zGryY/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
 
-  <!-- ✅ CORREÇÃO -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Conteúdo original aqui</p>
-  </section>
+</nav>
 
-  <!-- ✅ SCRIPT (somente se necessário) -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-  </script>
+</header>
+
+<section class="hero" id="topo">
+<div>
+<h1>Móveis Planejados Sob Medida</h1>
+<p>Projetos exclusivos que unem estética, funcionalidade e acabamento de alto padrão.</p>
+</div>
+</section>
+
+<section id="sobre">
+
+<h2 class="titulo">Quem Somos</h2>
+
+<div class="sobre-container">
+
+<div class="sobre-imagem">
+<img src="img/conceito.jpg" alt="Conceito Marcenaria Oliveira's">
+</div>
+
+<div class="sobre-texto">
+
+<p>
+A Marcenaria Oliveira’s nasceu com o propósito de transformar ambientes através de projetos únicos, onde cada detalhe carrega significado, identidade e sofisticação.
+</p>
+
+<p>
+A letra “M” remete às asas de uma borboleta, representando uma homenagem à “Meire”, trazendo um significado especial à marca e simbolizando transformação em cada projeto realizado.
+</p>
+
+<p>
+Os ramos de oliveira fazem referência ao sobrenome da família, reforçando nossas origens e a essência que sustenta o nosso trabalho.
+</p>
+
+<p>
+Criamos móveis que unem estética, funcionalidade e acabamento de alto padrão, com atenção a cada detalhe.
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 </body>
 </html>
