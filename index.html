@@ -8,6 +8,8 @@
 
 <title>Marcenaria Oliveira's | Móveis Planejados</title>
 
+<meta name="description" content="Marcenaria Oliveira's especializada em móveis planejados em Maringá, Paiçandu e região.">
+
 <link rel="icon" href="img/favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,17 +37,18 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
+flex-wrap:wrap;
 }
 
 .logo img{height:50px;}
 
-nav{
+/* MENU */
+.menu{
 display:flex;
 align-items:center;
 }
 
-/* LINKS */
-nav a{
+.menu a{
 color:#fff;
 text-decoration:none;
 margin-left:25px;
@@ -53,9 +56,8 @@ margin-left:25px;
 
 /* SOCIAL */
 .social{
-margin-left:25px;
 display:flex;
-gap:15px;
+gap:12px;
 }
 
 .social a{
@@ -91,6 +93,74 @@ color:#fff;
 .hero h1{font-size:40px;}
 .hero p{font-size:18px;}
 
+/* TITULO */
+.titulo{
+text-align:center;
+font-size:32px;
+margin-bottom:60px;
+color:#234255;
+}
+
+/* SEÇÕES */
+.sobre-container{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:60px;
+max-width:1100px;
+margin:auto;
+}
+
+.sobre-imagem img{
+width:100%;
+border-radius:10px;
+}
+
+.servicos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#f4f4f4;
+padding:40px;
+border-radius:10px;
+text-align:center;
+}
+
+.portfolio{background:#f7f7f7;}
+
+.galeria{
+column-count:3;
+column-gap:15px;
+}
+
+.galeria img{
+width:100%;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+/* CONTATO */
+.contato-container{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+}
+
+.formulario{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.formulario input,
+.formulario textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
 /* FOOTER */
 footer{
 background:#1b3443;
@@ -106,9 +176,10 @@ bottom:15px;
 right:15px;
 background:#25d366;
 color:#fff;
-padding:10px 15px;
+padding:12px 18px;
 border-radius:50px;
 text-decoration:none;
+font-weight:600;
 }
 
 /* MOBILE */
@@ -116,23 +187,24 @@ text-decoration:none;
 
 header{
 flex-direction:column;
+align-items:center;
 gap:10px;
 }
 
-nav{
+/* MENU MOBILE */
+.menu{
 flex-direction:column;
 gap:10px;
 }
 
-nav a{
+.menu a{
 margin:0;
 }
 
-/* SOCIAL MOBILE AJUSTADO */
+/* SOCIAL MOBILE */
 .social{
-margin:10px 0 0 0;
 justify-content:center;
-width:100%;
+margin-top:5px;
 }
 
 .social a{
@@ -141,9 +213,23 @@ height:44px;
 font-size:20px;
 }
 
+/* HERO */
 .hero{
 text-align:center;
 align-items:center;
+}
+
+/* GRID */
+.sobre-container{
+grid-template-columns:1fr;
+}
+
+.galeria{
+column-count:1;
+}
+
+.contato-container{
+grid-template-columns:1fr;
 }
 
 }
@@ -160,22 +246,21 @@ align-items:center;
 <a href="#topo"><img src="img/logo.png"></a>
 </div>
 
-<nav>
+<nav class="menu">
 <a href="#sobre">Quem Somos</a>
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
+</nav>
 
 <div class="social">
-  <a href="https://instagram.com/SEU_USUARIO" target="_blank">
+  <a href="https://www.instagram.com/marcenaria_oliveiras" target="_blank">
     <i class="fab fa-instagram"></i>
   </a>
-  <a href="https://facebook.com/SUA_PAGINA" target="_blank">
+  <a href="https://www.facebook.com/r.oliveira.marcenaria/" target="_blank">
     <i class="fab fa-facebook"></i>
   </a>
 </div>
-
-</nav>
 
 </header>
 
