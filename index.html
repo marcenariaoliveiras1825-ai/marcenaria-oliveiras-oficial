@@ -3,29 +3,6 @@
 
 <head>
 
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '961871099605998'); 
-fbq('track', 'PageView');
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=961871099605998&ev=PageView&noscript=1"/>
-</noscript>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -64,7 +41,10 @@ z-index:1000;
 
 .logo img{height:50px;}
 
-nav{display:flex;align-items:center;}
+nav{
+display:flex;
+align-items:center;
+}
 
 nav a{
 color:#fff;
@@ -72,10 +52,21 @@ text-decoration:none;
 margin-left:25px;
 }
 
+/* SOCIAL */
 .social{
 margin-left:25px;
 display:flex;
 gap:15px;
+}
+
+.social a{
+color:#fff;
+font-size:18px;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#c9a96e;
 }
 
 /* HERO */
@@ -101,83 +92,6 @@ margin-bottom:60px;
 color:#234255;
 }
 
-/* QUEM SOMOS */
-.sobre-container{
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:60px;
-max-width:1100px;
-margin:auto;
-}
-
-.sobre-imagem{
-background:#f5f5f5;
-padding:10px;
-border-radius:12px;
-}
-
-.sobre-imagem img{
-width:100%;
-border-radius:10px;
-}
-
-.sobre-texto p{
-margin-bottom:20px;
-}
-
-/* SERVIÇOS */
-.servicos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:#f4f4f4;
-padding:40px;
-border-radius:10px;
-text-align:center;
-}
-
-/* PORTFÓLIO */
-.portfolio{background:#f7f7f7;}
-
-.galeria{
-column-count:3;
-column-gap:15px;
-}
-
-.galeria img{
-width:100%;
-margin-bottom:15px;
-border-radius:10px;
-}
-
-/* CONTATO */
-.contato-container{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:40px;
-}
-
-.formulario{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.formulario input,
-.formulario textarea{
-padding:10px;
-border:1px solid #ccc;
-border-radius:6px;
-}
-
-.mapa iframe{
-border-radius:10px;
-margin-top:30px;
-}
-
 /* FOOTER */
 footer{
 background:#1b3443;
@@ -200,31 +114,9 @@ text-decoration:none;
 
 /* MOBILE */
 @media(max-width:600px){
-
 header{flex-direction:column;}
-
-nav{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.hero{
-text-align:center;
-align-items:center;
-}
-
-.sobre-container{
-grid-template-columns:1fr;
-}
-
-.galeria{
-column-count:1;
-}
-
-.contato-container{
-grid-template-columns:1fr;
-}
-
+nav{flex-wrap:wrap;justify-content:center;}
+.hero{text-align:center;align-items:center;}
 }
 
 </style>
@@ -244,6 +136,17 @@ grid-template-columns:1fr;
 <a href="#servicos">Serviços</a>
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
+
+<!-- REDES SOCIAIS -->
+<div class="social">
+  <a href="https://instagram.com/SEU_USUARIO" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com/SUA_PAGINA" target="_blank">
+    <i class="fab fa-facebook"></i>
+  </a>
+</div>
+
 </nav>
 
 </header>
@@ -255,93 +158,11 @@ grid-template-columns:1fr;
 </div>
 </section>
 
-<section id="sobre">
-
-<h2 class="titulo">Quem Somos</h2>
-
-<div class="sobre-container">
-
-<div class="sobre-imagem">
-<img src="img/conceito.jpg">
-</div>
-
-<div class="sobre-texto">
-
-<p>A Marcenaria Oliveira’s nasceu com o propósito de transformar ambientes através de projetos únicos, onde cada detalhe carrega significado, identidade e sofisticação.</p>
-
-<p>A letra “M” remete às asas de uma borboleta, representando uma homenagem à “Meire”, trazendo um significado especial à marca e simbolizando transformação em cada projeto realizado.</p>
-
-<p>Os ramos de oliveira fazem referência ao sobrenome da família, reforçando nossas origens e a essência que sustenta o nosso trabalho.</p>
-
-<p>Criamos móveis que unem estética, funcionalidade e acabamento de alto padrão, com atenção a cada detalhe.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="servicos">
-<h2 class="titulo">Serviços</h2>
-
-<div class="servicos">
-<div class="card">Cozinhas Planejadas</div>
-<div class="card">Guarda-Roupas</div>
-<div class="card">Painéis e Salas</div>
-<div class="card">Projetos Comerciais</div>
-</div>
-
-</section>
-
-<section id="portfolio" class="portfolio">
-<h2 class="titulo">Portfólio</h2>
-
-<div class="galeria">
-<img src="img/cozinha forno.jpeg">
-<img src="img/cristaleira.jpeg">
-<img src="img/mesa naill.jpeg">
-</div>
-
-</section>
-
-<section id="contato">
-
-<h2 class="titulo">Contato</h2>
-
-<div class="contato-container">
-
-<div>
-<p>Email: oliveiras.marcen@gmail.com</p>
-<p>WhatsApp: (44) 9143-8651</p>
-</div>
-
-<form class="formulario">
-<input placeholder="Nome">
-<input placeholder="Email">
-<textarea placeholder="Mensagem"></textarea>
-</form>
-
-<div>
-<p>Rua Pedro Ferrari, 447</p>
-</div>
-
-</div>
-
-<!-- MAPA RESTAURADO -->
-<div class="mapa">
-<iframe 
-src="https://www.google.com/maps?q=Rua+Pedro+Ferrari+447+Paiçandu+PR&output=embed"
-width="100%" height="350" style="border:0;" loading="lazy">
-</iframe>
-</div>
-
-</section>
-
 <footer>
 <p>© 2026 Marcenaria Oliveira's</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/554491438651" onclick="fbq('track','Contact');">
+<a class="whatsapp" href="https://wa.me/554491438651">
 WhatsApp
 </a>
 
